@@ -5,10 +5,109 @@
   top: 0;
   z-index: 30;
   &__content {
+    height: 89.8px;
+    transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    padding-left: 15px;
+    padding-right: 15px;
     &__container {
+      max-width: 1170px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0 26px 0;
       &__logo {
+        transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+        &__burger {
+          display: none;
+        }
+        &__main {
+          a {
+            color: #c4eeec;
+            transition: all 0.3s ease-in-out;
+            img {
+              width: auto;
+              height: auto;
+              max-width: 250px;
+              max-height: 200px;
+            }
+          }
+        }
       }
-      &__elemnts {
+      &__elements {
+        display: flex;
+        align-items: center;
+        &__list {
+          font-family: 'Oswald', sans-serif;
+          transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          &__item {
+            display: inline-block;
+            margin-left: 45px;
+            position: relative;
+            &:first-child {
+              margin-left: 0px;
+            }
+            &__icon {
+              display: inline-flex;
+              justify-content: center;
+              svg {
+                fill: #ffffff;
+                margin-left: 4px;
+                cursor: pointer;
+                width: 13.8px;
+                height: 13px;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+            &__dropdown {
+              display: none;
+            }
+            &:hover {
+              .navbar__content__container__elements__list__item__icon {
+                svg {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+            a {
+              color: #ffffff;
+              background: transparent;
+              font-weight: 500;
+              text-transform: uppercase;
+              font-size: 14px;
+              letter-spacing: 0.1em;
+              position: relative;
+              display: inline-block;
+              line-height: 1.2;
+              transition: 0.25s;
+              &::before {
+                content: '';
+                position: absolute;
+                top: -8px;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background-color: #c4eeec;
+                opacity: 0;
+                transition: all ease 0.25s;
+              }
+              &:hover {
+                &::before {
+                  transition: all ease 0.25s;
+                  width: 100%;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

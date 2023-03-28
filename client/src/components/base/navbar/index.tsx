@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/navbar/logo-default-225x39.png';
-import DownSvg from '../../../svgs/angle-down-solid.svg';
-import RightSvg from '../../../svgs/angle-right-solid.svg';
+import { ReactComponent as DownSvg } from '../../../svgs/angle-down-solid.svg';
+import { ReactComponent as RightSvg } from '../../../svgs/angle-right-solid.svg';
 import style from './style.module.scss';
 
 function Navbar(): JSX.Element {
@@ -30,7 +30,9 @@ function Navbar(): JSX.Element {
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
                 <Link to={'#'}>Tours</Link>
-                <DownSvg />
+                <div className={style.navbar__content__container__elements__list__item__icon}>
+                  <DownSvg />
+                </div>
                 <ul className={style.navbar__content__container__elements__list__item__dropdown}>
                   <li>
                     <Link to={'#'}>
