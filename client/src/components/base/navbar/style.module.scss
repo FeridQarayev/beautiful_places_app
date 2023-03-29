@@ -301,14 +301,71 @@
               text-transform: uppercase;
               font-size: 14px;
               letter-spacing: 0.1em;
-              color: #1e2227;
-              background: #ffffff;
+              color: #9b9b9b;
+            }
+            span {
+              position: relative;
+              cursor: pointer;
+              display: block;
+              svg {
+                position: absolute;
+                top: 50%;
+                right: 10%;
+                width: 16px;
+                height: 12px;
+                transition: 0.4s all ease;
+                transform: translateY(-50%);
+                z-index: 2;
+                fill: #9b9b9b;
+              }
+            }
+            &__dropdown {
+              display: none;
+              transition: opacity 0.3s, height 0.4s ease;
+              opacity: 0;
+              height: 0;
+              overflow: hidden;
+              li {
+                a {
+                  padding-left: 30px;
+                }
+              }
             }
           }
         }
       }
     }
   }
+}
+
+.burger__active {
+  span {
+    transform: rotate(360deg);
+    &::before {
+      top: 0;
+      width: 15px;
+      transform: rotate3d(0, 0, 1, -40deg);
+    }
+    &::after {
+      top: 0;
+      width: 15px;
+      transform: rotate3d(0, 0, 1, 40deg);
+    }
+  }
+}
+.menu__active {
+  transform: translateX(0);
+}
+.dropdown__arrow {
+  svg {
+    transform: rotate(180deg) translateY(50%) !important;
+  }
+}
+.dropdown__active {
+  padding: 4px 0 0;
+  display: block;
+  opacity: 1;
+  height: auto;
 }
 
 @media only screen and (max-width: 992px) {
