@@ -6,6 +6,7 @@ import { ReactComponent as RightSvg } from '../../../svgs/angle-right-solid.svg'
 import style from './style.module.scss';
 
 function Navbar(): JSX.Element {
+  
   return (
     <nav className={style.navbar}>
       <div className={style.navbar__content}>
@@ -68,20 +69,28 @@ function Navbar(): JSX.Element {
             <nav className={style.navbar__mobile__elements__content__list}>
               <li className={style.navbar__mobile__elements__content__list__item}>
                 <Link to={'#'}>Home</Link>
+              </li>
+              <li className={style.navbar__mobile__elements__content__list__item}>
                 <Link to={'#'}>About</Link>
-                <Link to={'#'}>
-                  Tours
-                  <span>
-                    <DownSvg />
-                  </span>
-                  <ul className={style.navbar__mobile__elements__content__list__item__dropdown}>
-                    <li>
-                      <Link to={'#'}>Single Tour</Link>
-                    </li>
-                  </ul>
-                </Link>
+              </li>
+              <li className={style.navbar__mobile__elements__content__list__item}>
+                <Link to={'#'}>Tours</Link>
+                <span>
+                  <DownSvg />
+                </span>
+                <ul className={style.navbar__mobile__elements__content__list__item__dropdown}>
+                  <li>
+                    <Link to={'#'}>Single Tour</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className={style.navbar__mobile__elements__content__list__item}>
                 <Link to={'#'}>Services</Link>
+              </li>
+              <li className={style.navbar__mobile__elements__content__list__item}>
                 <Link to={'#'}>Pages</Link>
+              </li>
+              <li className={style.navbar__mobile__elements__content__list__item}>
                 <Link to={'#'}>Contacts</Link>
               </li>
             </nav>
