@@ -11,9 +11,6 @@ function Navbar(): JSX.Element {
       <div className={style.navbar__content}>
         <div className={style.navbar__content__container}>
           <div className={style.navbar__content__container__logo}>
-            <button className={style.navbar__content__container__logo__burger}>
-              <span></span>
-            </button>
             <div className={style.navbar__content__container__logo__main}>
               <Link to={'home'}>
                 <img src={logo} alt="Logo" />
@@ -52,6 +49,42 @@ function Navbar(): JSX.Element {
                 <Link to={'#'}>Contacts</Link>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+      <div className={style.navbar__mobile}>
+        <div className={style.navbar__mobile__panel}>
+          <button className={style.navbar__mobile__panel__burger}>
+            <span></span>
+          </button>
+          <div className={style.navbar__mobile__panel__logo}>
+            <Link to={'home'}>
+              <img src={logo} alt="Logo" />
+            </Link>
+          </div>
+        </div>
+        <div className={style.navbar__mobile__elements}>
+          <div className={style.navbar__mobile__elements__content}>
+            <nav className={style.navbar__mobile__elements__content__list}>
+              <li className={style.navbar__mobile__elements__content__list__item}>
+                <Link to={'#'}>Home</Link>
+                <Link to={'#'}>About</Link>
+                <Link to={'#'}>
+                  Tours
+                  <span>
+                    <DownSvg />
+                  </span>
+                  <ul className={style.navbar__mobile__elements__content__list__item__dropdown}>
+                    <li>
+                      <Link to={'#'}>Single Tour</Link>
+                    </li>
+                  </ul>
+                </Link>
+                <Link to={'#'}>Services</Link>
+                <Link to={'#'}>Pages</Link>
+                <Link to={'#'}>Contacts</Link>
+              </li>
+            </nav>
           </div>
         </div>
       </div>

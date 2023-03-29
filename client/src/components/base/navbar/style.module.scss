@@ -22,9 +22,6 @@
       padding: 24px 0 26px 0;
       &__logo {
         transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
-        &__burger {
-          display: none;
-        }
         &__main {
           a {
             color: #c4eeec;
@@ -49,7 +46,7 @@
           margin: 0;
           &__item {
             display: inline-block;
-            margin-left: 45px;
+            margin-left: 38px;
             position: relative;
             a {
               color: #ffffff;
@@ -181,5 +178,31 @@
         }
       }
     }
+  }
+  &__mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1080;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 4px;
+    color: #9b9b9b;
+    box-shadow: 3px 0px 5px 0px rgba(255, 255, 255, 0.08);
+    background: #1e2227;
+    transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar__content {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .navbar__content__container__elements__list__item {
+    margin-left: 45px;
   }
 }
