@@ -1,13 +1,10 @@
 import React from 'react';
-import Navbar from './components/base/navbar';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ROUTES } from './routers/router';
+
+const router = createBrowserRouter(ROUTES);
 
 function App(): JSX.Element {
-  return (
-    <div>
-      <Navbar />
-      <div style={{ backgroundColor: 'red', height: '600px' }}>App</div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
-
 export default App;
