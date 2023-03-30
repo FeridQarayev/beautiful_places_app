@@ -19,23 +19,26 @@ footer{
     margin-left: 380px;
     margin-top: -24px;
 }
-.footer__right__logo {
-   margin-left:80% ;
-   margin-top: -10px;
-    & i{
+.footer__right{
+  margin-left:80% ;
+  margin-top: -10px;
+}
+.footer__right svg{
   margin-left: 20px;
   border-radius: 20px;
-  color: rgba(163, 161, 161, 0.7);
-  font-size: 18px;
+  fill: rgba(163, 161, 161, 0.7);
+  width: 19px;
   cursor: pointer;
-    } 
+   margin-top: -2px;
+ 
+}
+.footer__right svg:hover{
+  fill: antiquewhite;
+  transition: 0.8s;
+  background-color: rgb(99, 144, 170);
+  
 }
 
-.footer__right__logo :hover{
-    color: antiquewhite;
-    transition: 0.7s;
-    
-}
 
 
 @media screen and (max-width: 768px) {
@@ -57,10 +60,7 @@ footer{
       text-align: center;
     }
   
-    .footer__right__logo {
-      margin-right: 0;
-      justify-content: center;
-    }
+ 
   }
   
   /* Mobile styles */
@@ -74,8 +74,4 @@ footer{
       font-size: 10px;
     }
   
-    .footer__right__logo i {
-      margin-left: 10px;
-      font-size: 16px;
-    }
   }
