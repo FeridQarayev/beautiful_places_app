@@ -77,7 +77,9 @@ function Navbar(): JSX.Element {
           <div ref={menu} className={style.navbar__mobile__elements__content}>
             <nav className={style.navbar__mobile__elements__content__list}>
               <li className={style.navbar__mobile__elements__content__list__item}>
-                <Link to={'#'}>Home</Link>
+                <Link className={style.dropdown__active__link} to={'#'}>
+                  Home
+                </Link>
               </li>
               <li className={style.navbar__mobile__elements__content__list__item}>
                 <Link to={'#'}>About</Link>

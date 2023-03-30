@@ -294,6 +294,12 @@
           &__item {
             text-align: left;
             display: block;
+            &:hover {
+              a {
+                color: #1e2227 !important;
+                background: #ffffff !important;
+              }
+            }
             a {
               display: block;
               padding: 9px 56px 9px 18px;
@@ -367,10 +373,17 @@
   opacity: 1;
   height: auto;
 }
+.dropdown__active__link {
+  color: #1e2227 !important;
+  background: #ffffff !important;
+}
 
 @media only screen and (max-width: 992px) {
   .navbar__content {
     display: none;
+  }
+  .navbar__mobile {
+    display: block;
   }
 }
 @media only screen and (min-width: 1200px) {
