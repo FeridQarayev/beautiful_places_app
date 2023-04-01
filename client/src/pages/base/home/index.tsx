@@ -1,10 +1,11 @@
 import React from 'react';
+import HomeSlider from '../../../components/base/slider';
 
 function Home(): JSX.Element {
   return (
-    <React.Fragment>
-      <section></section>
-    </React.Fragment>
+    <div>
+      <HomeSlider />
+    </div>
   );
 }
 
