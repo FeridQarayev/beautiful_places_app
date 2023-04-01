@@ -9,7 +9,7 @@ function HomeSlider(): JSX.Element {
   return (
     <section className={'home__slider'}>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={0}
         centeredSlides={true}
         loop={true}
         autoplay={{
@@ -22,17 +22,33 @@ function HomeSlider(): JSX.Element {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <p>Slide 1</p>
+        <SwiperSlide
+          style={{
+            backgroundImage: `url(${require('../../../images/home_slider/185e72fcc687e291f6947cd48ca5f3a5.jpeg')})`,
+          }}
+        >
+          <div></div>
         </SwiperSlide>
-        <SwiperSlide>
-          <p>Slide 2</p>
+        <SwiperSlide
+          style={{
+            backgroundImage: `url(${require('../../../images/home_slider/1228821-azerbaijan.jpg')})`,
+          }}
+        >
+          <div></div>
         </SwiperSlide>
-        <SwiperSlide>
-          <p>Slide 3</p>
+        <SwiperSlide
+          style={{
+            backgroundImage: `url(${require('../../../images/home_slider/0c81f671-2d54-4e3f-a3e6-ebbbb65ba3d7.jpg')})`,
+          }}
+        >
+          <div></div>
         </SwiperSlide>
-        <SwiperSlide>
-          <p>Slide 4</p>
+        <SwiperSlide
+          style={{
+            backgroundImage: `url(${require('../../../images/home_slider/Winter-in-Azerbaijan-Feature-.jpg')})`,
+          }}
+        >
+          <div></div>
         </SwiperSlide>
       </Swiper>
     </section>
