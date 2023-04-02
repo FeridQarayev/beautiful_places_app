@@ -28,9 +28,7 @@ footer {
 
 .footer__right {
   display: flex;
-  gap: 20px;
- 
-  
+  gap: 10px;
 }
 .footer__right svg {
   fill: rgba(163, 161, 161, 0.7);
@@ -39,16 +37,12 @@ footer {
   border-radius: 50%;
   height: 35px;
   padding: 10px;
-  background-color: #262B31;
- 
-  
-
+  background-color: #262b31;
 }
 .footer__right svg:hover {
   fill: antiquewhite;
   background-color: #54585e;
   transition: 0.5s;
-  
 }
 
 @media screen and (max-width: 768px) {
