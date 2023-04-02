@@ -1,5 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container__first__card {
-  border: 1px solid black;
+
   width: 373px;
   height: 450px;
 
@@ -24,14 +29,14 @@
 }
 
 .container__second__card {
-  border: 1px solid black;
+  
   width: 373px;
   height: 450px;
   margin-left: 10px;
   margin-top: 50px;
 }
 .container__third__card {
-  border: 1px solid black;
+ 
   width: 373px;
   height: 450px;
   margin-left: 10px;
@@ -55,4 +60,12 @@
   margin-left: 80px;
   margin-right: 80px;
 }
-
+@media only screen and (max-width: 1280px) {
+    .container {
+       
+        
+      }
+    .container__cards{
+        
+    }
+}
