@@ -8,6 +8,8 @@ import style from './style.module.scss';
 function Navbar(): JSX.Element {
   const menu = useRef<HTMLDivElement>(null);
   const drop = useRef<HTMLUListElement>(null);
+  const content = useRef<HTMLDivElement>(null);
+
   const burgerMenu = (element: HTMLButtonElement): void => {
     element.classList.toggle(style.burger__active);
     menu.current?.classList.toggle(style.menu__active);
@@ -16,9 +18,16 @@ function Navbar(): JSX.Element {
     element.classList.toggle(style.dropdown__arrow);
     drop.current?.classList.toggle(style.dropdown__active);
   };
+
+  window.onscroll = (): void => {
+    window.scrollY > 90 && window.screen.width > 992
+      ? content.current?.classList.add(style.navbar__fixed)
+      : content.current?.classList.remove(style.navbar__fixed);
+  };
+
   return (
     <nav className={style.navbar}>
-      <div className={style.navbar__content}>
+      <div ref={content} className={style.navbar__content}>
         <div className={style.navbar__content__container}>
           <div className={style.navbar__content__container__logo}>
             <div className={style.navbar__content__container__logo__main}>

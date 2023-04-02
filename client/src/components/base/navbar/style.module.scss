@@ -345,6 +345,14 @@
   }
 }
 
+.navbar__fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1080;
+  background: #1e2227;
+}
 .burger__active {
   span {
     transform: rotate(360deg);
