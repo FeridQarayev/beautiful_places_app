@@ -11,17 +11,199 @@
       flex-wrap: wrap;
       margin-right: -15px;
       margin-left: -15px;
+      &__left {
+        margin-bottom: 30px;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        h2 {
+          margin-top: 0;
+          margin-bottom: 0;
+          font-weight: 500;
+          color: #151515;
+          font-family: 'Oswald';
+          text-transform: uppercase;
+          span {
+            visibility: visible;
+            animation-name: fadeInLeft;
+            &:nth-child(2) {
+              animation-delay: 0.2s;
+            }
+          }
+        }
+        &__text1 {
+          visibility: visible;
+          animation-delay: 0.3s;
+          animation-name: fadeInLeft;
+        }
+        &__text2 {
+          visibility: visible;
+          animation-delay: 0.4s;
+          animation-name: fadeInLeft;
+        }
+        &__img {
+          visibility: visible;
+          animation-delay: 0.5s;
+          animation-name: fadeInUp;
+          margin-top: 25px;
+          img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            border-style: none;
+            width: 113px;
+            aspect-ratio: auto 113 / 66;
+          }
+        }
+      }
+      &__right {
+        margin-bottom: 30px;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        &__box {
+          display: flex;
+          visibility: visible;
+          animation-name: fadeInUp;
+          margin-top: -30px;
+          &__left {
+            transition: transform 0.5s ease;
+            margin-top: 30px;
+          }
+          &__right {
+            margin-top: 30px;
+            transition: transform 0.5s ease;
+          }
+          img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            width: 364px;
+            aspect-ratio: auto 364 / 459;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
+          }
+          &:hover {
+            .way_travel__container__row__right__box__left {
+              transform: translateY(50px);
+            }
+            .way_travel__container__row__right__box__right {
+              transform: translate(-15px, 0);
+              transition: transform 0.5s ease;
+            }
+          }
+        }
+      }
     }
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 576px) {
+  .way_travel {
+    &__container {
+      &__row {
+        &__left {
+          h2 {
+            span {
+            }
+          }
+          &__text1 {
+          }
+          &__text2 {
+          }
+        }
+        &__right {
+          &__box {
+            flex-wrap: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .way_travel {
+    &__container {
+      &__row {
+        &__left {
+          h2 {
+            span {
+            }
+          }
+          &__text1 {
+          }
+          &__text2 {
+            margin-top: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
   .way_travel {
     background-size: cover;
     padding-top: 100px;
     padding-bottom: 70px;
     &__container {
       max-width: 1200px;
+      &__row {
+        &__left {
+          flex: 0 0 41.66667%;
+          max-width: 41.66667%;
+          h2 {
+            font-size: 36px;
+            line-height: 1.11111;
+            span {
+              display: block !important;
+            }
+          }
+          &__text1 {
+            margin-top: 50px;
+          }
+        }
+        &__right {
+          flex: 0 0 58.33333%;
+          max-width: 58.33333%;
+          &__box {
+            justify-content: flex-start;
+            margin-left: 0;
+            padding-left: 40px;
+            &__left {
+              margin-left: 0;
+            }
+            &__right {
+              position: absolute;
+              right: 0;
+              transform: translate(-100px, 50px);
+              margin-left: 0;
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
