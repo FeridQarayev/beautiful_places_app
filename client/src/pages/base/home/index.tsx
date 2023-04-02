@@ -8,7 +8,7 @@ function Home(): JSX.Element {
       <HomeSlider />
 
       <section
-        style={{ backgroundImage: `url(${require('../../../images/home/bg-home-1.png')})` }}
+        style={{ backgroundImage: `url(${require('../../../images/home/bg-home-1.png')} no-repeat top right)` }}
         className={style.way_travel}
       >
         <div className={style.way_travel__container}>
