@@ -1,7 +1,12 @@
 import React from 'react';
+import HomeSlider from '../../../components/base/slider';
 
 function Home(): JSX.Element {
-  return <div style={{ backgroundColor: 'red', height: '600px' }}>Home</div>;
+  return (
+    <div>
+      <HomeSlider />
+    </div>
+  );
 }
 
 export default Home;
