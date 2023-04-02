@@ -1,0 +1,58 @@
+.container__first__card {
+  border: 1px solid black;
+  width: 373px;
+  height: 450px;
+
+  margin-top: 50px;
+}
+.container__card__content span {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 5px;
+}
+.container__card__content h5 {
+  font-size: 18px;
+  line-height: 1.44444;
+}
+.container__card__content h5 a {
+  color: #151515;
+  font-family: 'Oswald', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 500;
+}
+.container__card__content p {
+  margin-top: 15px;
+}
+
+.container__second__card {
+  border: 1px solid black;
+  width: 373px;
+  height: 450px;
+  margin-left: 10px;
+  margin-top: 50px;
+}
+.container__third__card {
+  border: 1px solid black;
+  width: 373px;
+  height: 450px;
+  margin-left: 10px;
+  margin-top: 50px;
+}
+.container__cards {
+  display: flex;
+  width: 100%;
+
+  margin-top: 20px;
+  gap: 30px;
+}
+.container__title {
+  color: #151515;
+  font-family: 'Oswald', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 36px;
+  line-height: 1.11111;
+  font-weight: 500;
+}
+.container {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
