@@ -15,7 +15,7 @@ function Footer(): JSX.Element {
           <p>Copyright ©2023 All Rights Reserved </p>
         </div>
       </div>
-
+      
       <div className={styles.footer__right}>
         <FacebookSvg />
         <InstagramSvg />
