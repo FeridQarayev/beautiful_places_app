@@ -31,7 +31,7 @@ footer {
   gap: 10px;
 }
 .footer__right svg {
-  fill:#616972;
+  fill: #616972;
   width: 35px;
   cursor: pointer;
   border-radius: 50%;
@@ -41,7 +41,7 @@ footer {
 }
 .footer__right svg:hover {
   fill: #ffffff;
-  background-color: #54585e;
+  background-color: #424b56;
   transition: 0.5s;
 }
 
@@ -59,8 +59,7 @@ footer {
   .first__footer__left__img p {
     margin-top: 10px;
   }
-  .footer__right{
+  .footer__right {
     margin-top: 16px;
   }
-
 }
