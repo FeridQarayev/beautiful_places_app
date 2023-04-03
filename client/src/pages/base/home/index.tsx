@@ -20,20 +20,22 @@ function Home(): JSX.Element {
           <div className={style.way_travel__container__row}>
             <div className={style.way_travel__container__row__left}>
               <h2>
-                <span data-aos="fade-left">Explore a different</span>
+                <span data-aos="fade-left">əfsanəvi göllər </span>
                 <span data-aos="fade-left" data-aos-delay="200">
-                  way to travel
+                  unikal tarix
                 </span>
               </h2>
               <p data-aos="fade-left" data-aos-delay="300" className={style.way_travel__container__row__left__text1}>
-                Discover new cultures and have a wonderful rest with Backpack Story! Select the country you’d like to
-                visit and provide our agents with estimated time – they’ll find and offer the most suitable tours and
-                hotels.
+                Göygöl şəhəri və rayon ərazisindəki əsrarəngiz təbiət turistlərin diqqətini çəkməyə bilməz. Bu gün də
+                həm tarixi məkan, həm də təbiətə səyahət etmək istəyənlər Göygölə yollanır.
               </p>
               <p data-aos="fade-left" data-aos-delay="400" className={style.way_travel__container__row__left__text2}>
-                During our work, we organized countless journeys for our clients. We started as a small tour bureau, and
-                soon we expanded our offers list. Today we have valuable experience travelling and we can advise the
-                most stunning resorts, cities and countries to visit!
+                Ölkənin ən sevilən dağ gölü olaraq şeirlər, rəsm əsərləri və musiqilərdə tərənnüm olunan Göygöl gölü
+                payızda qızılı rəngə boyanan qalın yaşıl meşələrlə əhatə olunmuş Kəpəz dağının ətəyində yerləşir.
+                Yaxınlıqda yerləşən Maralgöl də olduqca göz oxşayır. Yeddi gölü əhatə edən Göygöl Milli Parkından
+                savayı, burada iki əsr öncə məskən salmış almanların da irsi ilə tanış ola və alman kəndlərinin
+                ab-havasını da duya bilərsiniz. Orijinal alman metodları əsasında hazırlanmış yerli şərabları dadmağı
+                unutmayın.
               </p>
               <div data-aos="fade-up" data-aos-delay="500" className={style.way_travel__container__row__left__img}>
                 <img src={require('../../../images/home/signature-1-113x66.png')} alt="logo" />
@@ -42,10 +44,13 @@ function Home(): JSX.Element {
             <div className={style.way_travel__container__row__right}>
               <div data-aos="fade-up" className={style.way_travel__container__row__right__box}>
                 <div className={style.way_travel__container__row__right__box__left}>
-                  <img src={require('../../../images/home/img-2-home-364x459.jpg')} alt="place" />
+                  <img src={require('../../../images/home/c5c1186d-731c-4fab-a44c-6cebaae00d62.jpg')} alt="place" />
                 </div>
                 <div className={style.way_travel__container__row__right__box__right}>
-                  <img src={require('../../../images/home/img-1-home-364x459.jpg')} alt="place" />
+                  <img
+                    src={require('../../../images/home/follow-traces-german-heritage-goygol-azerbaijan-03.jpg')}
+                    alt="place"
+                  />
                 </div>
               </div>
             </div>
