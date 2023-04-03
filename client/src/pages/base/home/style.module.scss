@@ -1,3 +1,188 @@
-body {
-  background-color: red;
+.way_travel {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    &__row {
+      margin-bottom: -30px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+      &__left {
+        margin-bottom: 30px;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        h2 {
+          margin-top: 0;
+          margin-bottom: 0;
+          font-weight: 500;
+          color: #151515;
+          font-family: 'Oswald';
+          text-transform: uppercase;
+          span {
+            visibility: visible;
+          }
+        }
+        &__text1 {
+          visibility: visible;
+        }
+        &__text2 {
+          visibility: visible;
+        }
+        &__img {
+          visibility: visible;
+          margin-top: 25px;
+          img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            border-style: none;
+            width: 113px;
+            aspect-ratio: auto 113 / 66;
+          }
+        }
+      }
+      &__right {
+        margin-bottom: 30px;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        &__box {
+          display: flex;
+          visibility: visible;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: -30px;
+          margin-left: -30px;
+          &__left {
+            transition: transform 0.5s ease;
+            margin-top: 30px;
+            margin-left: 30px;
+          }
+          &__right {
+            margin-left: 30px;
+            margin-top: 30px;
+            transition: transform 0.5s ease;
+          }
+          img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+            width: 364px;
+            height: 459px;
+            aspect-ratio: auto 364 / 459;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .way_travel {
+    &__container {
+      max-width: 540px;
+      &__row__right__box {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .way_travel {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    &__container {
+      max-width: 720px;
+      &__row__left {
+        &__text1 {
+          margin-top: 20px;
+        }
+        &__text2 {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .way_travel {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: none;
+    &__container {
+      max-width: 960px;
+      &__row__left__text2 {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .way_travel {
+    background-size: cover !important;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    &__container {
+      max-width: 1200px;
+      &__row {
+        &__left {
+          flex: 0 0 41.66667%;
+          max-width: 41.66667%;
+          h2 {
+            font-size: 36px;
+            line-height: 1.11111;
+            span {
+              display: block !important;
+            }
+          }
+          &__text1 {
+            margin-top: 50px;
+          }
+        }
+        &__right {
+          flex: 0 0 58.33333%;
+          max-width: 58.33333%;
+          &__box {
+            justify-content: flex-start;
+            margin-left: 0;
+            padding-left: 40px;
+            &__left {
+              margin-left: 0;
+            }
+            &__right {
+              position: absolute;
+              right: 0;
+              transform: translate(-100px, 50px);
+              margin-left: 0;
+            }
+            &:hover {
+              .way_travel__container__row__right__box__left {
+                transform: translateY(50px);
+              }
+              .way_travel__container__row__right__box__right {
+                transform: translate(-15px, 0);
+                transition: transform 0.5s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .way_travel {
+    background: none !important;
+  }
 }
