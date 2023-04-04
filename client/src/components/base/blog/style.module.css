@@ -6,13 +6,13 @@
 .container__first__card {
   width: 373px;
   height: 450px;
-
   margin-top: 50px;
 }
 .container__card__content span {
   font-size: 12px;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .container__card__content h5 {
   font-size: 18px;
@@ -41,10 +41,10 @@
 }
 .container__cards {
   display: flex;
-  width: 100%;
-
-  margin-top: 20px;
-  gap: 30px;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  gap:15px;
 }
 .container__title {
   color: #151515;
@@ -57,9 +57,9 @@
   margin-left: 80px;
   margin-right: 80px;
 }
-@media only screen and (max-width: 1280px) {
-  .container {
-  }
-  .container__cards {
-  }
+@media only screen and (min-width: 1270px) {
+ .blog__posts{
+ 
+  
+ }
 }
