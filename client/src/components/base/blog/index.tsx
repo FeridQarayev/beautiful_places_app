@@ -17,7 +17,9 @@ function Footer(): JSX.Element {
             <div className={styles.container__card__content}>
               <span>January 1,2021</span>
               <h5>
-                <a href="#">5 PLACES TO VISIT WINTER</a>
+                <a href="#" className={styles.container__link}>
+                  5 PLACES TO VISIT WINTER
+                </a>
               </h5>
               <p>
                 New Year and Christmas holidays is a great occasion to travel somewhere. You can either go somewhere
@@ -32,7 +34,9 @@ function Footer(): JSX.Element {
             <div className={styles.container__card__content}>
               <span>January 1,2021</span>
               <h5>
-                <a href="#">BUDGET TRIPS FOR WINTER BREAK</a>
+                <a href="#" className={styles.container__link}>
+                  BUDGET TRIPS FOR WINTER BREAK
+                </a>
               </h5>
               <p>
                 Budget trip doesn’t mean boring! There are numerous places worth visiting even if you don’t have much
@@ -47,7 +51,9 @@ function Footer(): JSX.Element {
             <div className={styles.container__card__content}>
               <span>January 1,2021</span>
               <h5>
-                <a href="#">WALKING TO MACHU PICCHU, PERU</a>
+                <a href="#" className={styles.container__link}>
+                  WALKING TO MACHU PICCHU, PERU
+                </a>
               </h5>
               <p>
                 Machu Picchu is mysterious and attractive place for all tourists visiting Peru. If you agree to take
