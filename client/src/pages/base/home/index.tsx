@@ -57,6 +57,8 @@ function Home(): JSX.Element {
           </div>
         </div>
       </section>
+
+      <section className={style.advantages}></section>
     </React.Fragment>
   );
 }
