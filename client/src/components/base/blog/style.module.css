@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .container__first__card {
   width: 373px;
   height: 450px;
@@ -59,8 +54,11 @@
   font-weight: 500;
 }
 .container {
-  margin-left: 80px;
-  margin-right: 80px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .container__card__img img:hover {
   cursor: pointer;
@@ -71,9 +69,64 @@
 @media only screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  }
+  .container__cards{
+    margin-top: 60px;
+  }
+  .blog__posts{
+    padding: 115px 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .container__title{
+    font-size: 36px;
+    line-height: 1.11111
+  }
+  .container__first__card{
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .container__second__card{
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .container__third__card{
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .blog__posts{
+    padding: 100px 0;;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .container__title{
+    text-align: left !important;
+  }
+  .container__first__card{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .container__second__card{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .container__third__card{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .blog__posts{
+    padding: 85px 0;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
   }
 }
