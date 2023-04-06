@@ -42,9 +42,10 @@
 .container__cards {
   display: flex;
   margin-top: 20px;
-  gap: 10px;
+  gap: 70px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -30px;
 }
 .container__title {
   color: #151515;
@@ -66,67 +67,46 @@
   border-radius: 50%;
   transition: 1s ease;
 }
-@media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-  .container__cards{
-    margin-top: 60px;
-  }
-  .blog__posts{
-    padding: 115px 0;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-  .container__title{
-    font-size: 36px;
-    line-height: 1.11111
-  }
-  .container__first__card{
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-  }
-  .container__second__card{
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-  }
-  .container__third__card{
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-  }
-  .blog__posts{
-    padding: 100px 0;;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-  .container__title{
-    text-align: left !important;
-  }
-  .container__first__card{
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .container__second__card{
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .container__third__card{
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-  .blog__posts{
-    padding: 85px 0;
-  }
-}
 
 @media only screen and (min-width: 576px) {
   .container {
     max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .container__title {
+    font-size: 36px;
+    line-height: 1.11111;
+  }
+  .container__first__card {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .container__second__card {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .container__third__card {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .blog__posts {
+    padding: 100px 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  .container__cards {
+    margin-top: 60px;
+  }
+  .blog__posts {
+    padding: 115px 0;
+    display: flex;
   }
 }
