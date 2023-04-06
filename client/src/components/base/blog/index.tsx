@@ -2,7 +2,7 @@ import React from 'react';
 import BlogPosts1 from '../../../images/blog__posts/blog-post-1.jpg';
 import BlogPosts2 from '../../../images/blog__posts/blog-post-2.jpg';
 import BlogPosts3 from '../../../images/blog__posts/blog-post-3.jpg';
-import styles from './style.module.css';
+import styles from './style.module.scss';
 
 function Footer(): JSX.Element {
   return (
@@ -10,7 +10,7 @@ function Footer(): JSX.Element {
       <div className={styles.container}>
         <h2 className={styles.container__title}>OUR BLOG POSTS</h2>
         <div className={styles.container__cards}>
-          <div className={styles.container__first__card}>
+          <div className={styles.container__card}>
             <div className={styles.container__card__img}>
               <img src={BlogPosts1} />
             </div>
@@ -27,7 +27,7 @@ function Footer(): JSX.Element {
               </p>
             </div>
           </div>
-          <div className={styles.container__second__card}>
+          <div className={styles.container__card}>
             <div className={styles.container__card__img}>
               <img src={BlogPosts2} />
             </div>
@@ -44,7 +44,7 @@ function Footer(): JSX.Element {
               </p>
             </div>
           </div>
-          <div className={styles.container__third__card}>
+          <div className={styles.container__card}>
             <div className={styles.container__card__img}>
               <img src={BlogPosts3} />
             </div>

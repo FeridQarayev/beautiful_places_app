@@ -1,0 +1,122 @@
+$color_1: #151515;
+$color_2: #737576;
+$font-family_1: 'Oswald', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+.container__card {
+	width: 373px;
+	height: 450px;
+	margin-top: 50px;
+	margin-left: 10px;
+}
+.container__card__content {
+	span {
+		font-size: 12px;
+		display: block;
+		margin-bottom: 10px;
+		margin-top: 10px;
+	}
+	h5 {
+		font-size: 18px;
+		line-height: 1.44444;
+		a {
+			color: $color_1;
+			font-family: $font-family_1;
+			font-weight: 500;
+		}
+	}
+	p {
+		margin-top: 15px;
+	}
+}
+.container__link {
+	&:hover {
+		color: $color_2;
+		cursor: pointer;
+	}
+	transition: 0.4s;
+}
+.container__cards {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+	margin-bottom: -30px;
+}
+.container__title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: 500;
+	color: $color_1;
+	font-family: $font-family_1;
+	text-transform: uppercase;
+	font-size: 36px;
+}
+.container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.container__card__img {
+	img {
+		&:hover {
+			cursor: pointer;
+			opacity: 0.7;
+			border-radius: 50%;
+		}
+		transition: 1s ease;
+		width: auto;
+		height: auto;
+	}
+}
+@media only screen and (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.blog__posts {
+		padding: 85px 0;
+	}
+	.container {
+		max-width: 720px;
+	}
+	.container__title {
+		text-align: left !important;
+	}
+	.container__card {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.blog__posts {
+		padding: 100px 0;
+	}
+	.container {
+		max-width: 960px;
+	}
+	.container__card {
+		flex: 0 0 33.33333%;
+		max-width: 33.33333%;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.blog__posts {
+		padding: 115px 0;
+	}
+	.container {
+		max-width: 1200px;
+	}
+	.container__title {
+		font-size: 36px;
+		line-height: 1.11111;
+	}
+	.container__cards {
+		margin-top: 60px;
+	}
+	.container__card__img {
+		margin-bottom: 30px;
+	}
+}
