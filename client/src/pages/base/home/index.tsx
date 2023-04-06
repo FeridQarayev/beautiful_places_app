@@ -58,7 +58,34 @@ function Home(): JSX.Element {
         </div>
       </section>
 
-      <section className={style.advantages}></section>
+      <section className={style.advantages}>
+        <div className={style.advantages__container}>
+          <div className={style.advantages__container__row}>
+            <div className={style.advantages__container__row__card}>
+              <h2>01. best Hotels</h2>
+              <p>
+                We guarantee the best hotels and very comfortable rooms, which will be appreciated by every traveller.
+                You will be absolutely happy with the hotel and will have a wonderful vacation there.
+              </p>
+            </div>
+            <div className={style.advantages__container__row__card}>
+              <h2>02. Tourist Guide</h2>
+              <p>
+                We provide our clients with such a service as Tourist Guide. Its main goal is to ensure people with all
+                necessary information any time it is needed. This service is similar to Customer Support with emphasis
+                on travelling.
+              </p>
+            </div>
+            <div className={style.advantages__container__row__card}>
+              <h2>03. Flights Tickets</h2>
+              <p>
+                You can book tickets on any plane online via our booking system. Here you have an opportunity to select
+                your transport operator. Our representatives will help you with the details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </React.Fragment>
   );
 }
