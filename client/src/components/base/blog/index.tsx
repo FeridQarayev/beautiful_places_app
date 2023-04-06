@@ -1,7 +1,7 @@
 import React from 'react';
-import BlogPosts1 from '../../../images/blog__posts/blog-post-1.jpg';
-import BlogPosts2 from '../../../images/blog__posts/blog-post-2.jpg';
-import BlogPosts3 from '../../../images/blog__posts/blog-post-3.jpg';
+import BlogPosts1 from '../../../images/blog_posts/blog-post-1.jpg';
+import BlogPosts2 from '../../../images/blog_posts/blog-post-2.jpg';
+import BlogPosts3 from '../../../images/blog_posts/blog-post-3.jpg';
 import styles from './style.module.scss';
 
 function Footer(): JSX.Element {
