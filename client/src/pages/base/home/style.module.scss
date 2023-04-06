@@ -88,6 +88,48 @@
   }
 }
 
+.advantages {
+  background-color: #ffffff;
+  padding: 50px 0;
+  &__container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    &__row {
+      margin-bottom: -30px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+      &__card {
+        margin-bottom: 30px;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        h2 {
+          font-size: 28px;
+          line-height: 1.5;
+          margin-top: 0;
+          margin-bottom: 0;
+          font-weight: 500;
+          color: #151515;
+          font-family: 'Oswald', sans-serif;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+          background-color: transparent;
+          color: rgb(21, 21, 21);
+        }
+        P {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 576px) {
   .way_travel {
     &__container {
@@ -95,6 +137,11 @@
       &__row__right__box {
         flex-wrap: nowrap;
       }
+    }
+  }
+  .advantages {
+    &__container {
+      max-width: 540px;
     }
   }
 }
@@ -114,6 +161,15 @@
       }
     }
   }
+  .advantages {
+    padding: 70px 0;
+    &__container {
+      max-width: 720px;
+      P {
+        margin-top: 20px;
+      }
+    }
+  }
 }
 @media only screen and (min-width: 992px) {
   .way_travel {
@@ -124,6 +180,16 @@
       max-width: 960px;
       &__row__left__text2 {
         margin-top: 25px;
+      }
+    }
+  }
+  .advantages {
+    padding: 80px 0 90px;
+    &__container {
+      max-width: 960px;
+      &__row__card {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
       }
     }
   }
@@ -179,6 +245,24 @@
         }
       }
     }
+  }
+  .advantages {
+    &__container {
+      max-width: 1200px;
+      h2 {
+        font-size: 36px;
+        line-height: 1.11111;
+      }
+      p {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 2370px) {
+  .advantages {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 @media only screen and (max-width: 1200px) {
