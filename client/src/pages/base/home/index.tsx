@@ -1,6 +1,7 @@
 import AOS from 'aos';
 import React, { useEffect } from 'react';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 import HomeSlider from '../../../components/base/slider';
 import style from './style.module.scss';
 
@@ -82,6 +83,59 @@ function Home(): JSX.Element {
                 You can book tickets on any plane online via our booking system. Here you have an opportunity to select
                 your transport operator. Our representatives will help you with the details.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={style.tours}>
+        <div className={style.tours__bg}>
+          <div className={style.tours__bg__container}>
+            <div className={style.tours__bg__container__row}>
+              <div className={style.tours__bg__container__row__col}>
+                <Link to={'#'}>
+                  <img src={require('../../../images/home/home-gallery-1-370x510.jpg')} alt="" />
+                  <div className={style.tours__bg__container__row__col__description}>
+                    <div>Canada</div>
+                    <span>from</span>
+                    <span className={style.tours__bg__container__row__col__description__price}>$540</span>
+                  </div>
+                </Link>
+              </div>
+              <div className={style.tours__bg__container__row__col}>
+                <div className={style.tours__bg__container__row__col__row}>
+                  <div className={style.tours__bg__container__row__col__row__card}>
+                    <Link to={'#'}>
+                      <img src={require('../../../images/home/home-gallery-2-370x240.jpg')} alt="" />
+                      <div className={style.tours__bg__container__row__col__description}>
+                        <div>India</div>
+                        <span>from</span>
+                        <span className={style.tours__bg__container__row__col__description__price}>$330</span>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className={style.tours__bg__container__row__col__row__card}>
+                    <Link to={'#'}>
+                      <img src={require('../../../images/home/home-gallery-3-370x240.jpg')} alt="" />
+                      <div className={style.tours__bg__container__row__col__description}>
+                        <div>China</div>
+                        <span>from</span>
+                        <span className={style.tours__bg__container__row__col__description__price}>$500</span>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className={style.tours__bg__container__row__col}>
+                <Link to={'#'}>
+                  <img src={require('../../../images/home/home-gallery-4-370x510.jpg')} alt="" />
+                  <div className={style.tours__bg__container__row__col__description}>
+                    <div>Paris</div>
+                    <span>from</span>
+                    <span className={style.tours__bg__container__row__col__description__price}>$720</span>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
