@@ -88,7 +88,10 @@ function Home(): JSX.Element {
         </div>
       </section>
 
-      <section className={style.tours}>
+      <section
+        style={{ background: `url(${require('../../../images/home/bg-home-3.png')}) no-repeat center right` }}
+        className={style.tours}
+      >
         <div className={style.tours__bg}>
           <div className={style.tours__bg__container}>
             <div className={style.tours__bg__container__row}>
