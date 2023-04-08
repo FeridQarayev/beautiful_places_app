@@ -95,46 +95,57 @@ function Home(): JSX.Element {
         <div className={style.tours__bg}>
           <div className={style.tours__bg__container}>
             <div className={style.tours__bg__container__row}>
-              <div className={style.tours__bg__container__row__col}>
+              <div data-aos="fade-left" className={style.tours__bg__container__row__col}>
                 <Link to={'#'}>
-                  <img src={require('../../../images/home/home-gallery-1-370x510.jpg')} alt="" />
+                  <img src={require('../../../images/home/1e96c2b3-ca3d-4f2b-a05a-ef9a92876a3f.jpg')} alt="" />
                   <div className={style.tours__bg__container__row__col__description}>
-                    <div>Canada</div>
-                    <span>from</span>
+                    <div>Xızı</div>
+                    <span>dən</span>
                     <span className={style.tours__bg__container__row__col__description__price}>$540</span>
                   </div>
                 </Link>
               </div>
               <div className={style.tours__bg__container__row__col}>
                 <div className={style.tours__bg__container__row__col__row}>
-                  <div className={style.tours__bg__container__row__col__row__card}>
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    className={style.tours__bg__container__row__col__row__card}
+                  >
                     <Link to={'#'}>
-                      <img src={require('../../../images/home/home-gallery-2-370x240.jpg')} alt="" />
+                      <img
+                        src={require('../../../images/home/backpacking-khinaliq-laza-caucasus-azerbaijan-main-image-op-thumb.jpg')}
+                        alt=""
+                      />
                       <div className={style.tours__bg__container__row__col__description}>
-                        <div>India</div>
-                        <span>from</span>
+                        <div>Xınalıq</div>
+                        <span>dən</span>
                         <span className={style.tours__bg__container__row__col__description__price}>$330</span>
                       </div>
                     </Link>
                   </div>
-                  <div className={style.tours__bg__container__row__col__row__card}>
+                  <div
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                    className={style.tours__bg__container__row__col__row__card}
+                  >
                     <Link to={'#'}>
-                      <img src={require('../../../images/home/home-gallery-3-370x240.jpg')} alt="" />
+                      <img src={require('../../../images/home/the-nature-of-azerbaijan.jpg')} alt="" />
                       <div className={style.tours__bg__container__row__col__description}>
-                        <div>China</div>
-                        <span>from</span>
+                        <div>İsmayıllı</div>
+                        <span>dən</span>
                         <span className={style.tours__bg__container__row__col__description__price}>$500</span>
                       </div>
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className={style.tours__bg__container__row__col}>
+              <div data-aos="fade-right" data-aos-delay="400" className={style.tours__bg__container__row__col}>
                 <Link to={'#'}>
-                  <img src={require('../../../images/home/home-gallery-4-370x510.jpg')} alt="" />
+                  <img src={require('../../../images/home/ce6d4c0d-0818-4965-95f7-13d9442a53d5.jpg')} alt="" />
                   <div className={style.tours__bg__container__row__col__description}>
-                    <div>Paris</div>
-                    <span>from</span>
+                    <div>Qusar</div>
+                    <span>dən</span>
                     <span className={style.tours__bg__container__row__col__description__price}>$720</span>
                   </div>
                 </Link>
