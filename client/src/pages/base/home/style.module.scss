@@ -131,6 +131,7 @@
 }
 
 .tours {
+  padding: 50px 0;
   &__bg__container {
     width: 100%;
     padding-right: 15px;
@@ -147,48 +148,136 @@
       &__col {
         margin-bottom: 30px;
         display: flex !important;
-        order: 1;
         position: relative;
         width: 100%;
+        order: 4;
         padding-right: 15px;
         padding-left: 15px;
-        a {
-          max-width: 370px;
-          margin-left: auto;
-          margin-right: auto;
-          position: relative;
+        &:nth-child(1) {
+          order: 1;
+        }
+        &:nth-child(2) {
+          order: 3;
+        }
+        &:not(:nth-child(2)) {
+          a {
+            max-width: 370px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            &::before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              top: 60%;
+              background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.71) 100%);
+              z-index: 1;
+              transition: all ease 0.25s;
+            }
+            img {
+              display: inline-block;
+              max-width: 100%;
+              height: auto;
+              width: 370px;
+              aspect-ratio: auto 370 / 510;
+            }
+            .tours__bg__container__row__col__description {
+              position: absolute;
+              left: 30px;
+              bottom: 30px;
+              right: 30px;
+              z-index: 2;
+              font-family: 'Oswald', sans-serif;
+              div {
+                color: #ffffff;
+                font-weight: 700;
+                text-transform: none;
+              }
+              span:nth-child(1) {
+                font-size: 14px;
+                color: #ffffff;
+                font-weight: 100;
+                display: inline-block;
+              }
+              &__price {
+                font-size: 18px;
+                font-weight: 500;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+        &__row {
+          margin-bottom: -30px;
           display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          overflow: hidden;
-          &::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top: 60%;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.71) 100%);
-            z-index: 1;
-            transition: all ease 0.25s;
-          }
-          img {
-            display: inline-block;
-            max-width: 100%;
-            height: auto;
-            width: 370px;
-            aspect-ratio: auto 370 / 510;
-          }
-          &__description {
-            position: absolute;
-            left: 30px;
-            bottom: 30px;
-            right: 30px;
-            z-index: 2;
-            div {
-              color: #ffffff;
-              font-weight: 700;
-              text-transform: none;
+          flex-wrap: wrap;
+          margin-right: -15px;
+          margin-left: -15px;
+          &__card {
+            margin-bottom: 30px;
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            a {
+              max-width: 370px;
+              margin-left: auto;
+              margin-right: auto;
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              overflow: hidden;
+              color: #c4eeec;
+              transition: all 0.3s ease-in-out;
+              &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 60%;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.71) 100%);
+                z-index: 1;
+                transition: all ease 0.25s;
+              }
+              img {
+                display: inline-block;
+                max-width: 100%;
+                height: auto;
+                width: 370px;
+                aspect-ratio: auto 370 / 510;
+              }
+              .tours__bg__container__row__col__description {
+                position: absolute;
+                left: 30px;
+                bottom: 30px;
+                right: 30px;
+                z-index: 2;
+                font-family: 'Oswald', sans-serif;
+                div {
+                  color: #ffffff;
+                  font-weight: 700;
+                  text-transform: none;
+                }
+                span:nth-child(1) {
+                  font-size: 14px;
+                  color: #ffffff;
+                  font-weight: 100;
+                  display: inline-block;
+                }
+                &__price {
+                  font-size: 18px;
+                  font-weight: 500;
+                  margin-left: 5px;
+                }
+              }
             }
           }
         }
@@ -209,6 +298,17 @@
   .advantages {
     &__container {
       max-width: 540px;
+    }
+  }
+  .tours__bg__container {
+    max-width: 540px;
+    &__row__col {
+      flex: 0 0 50%;
+      max-width: 50%;
+      &__row__card {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
     }
   }
 }
@@ -237,6 +337,15 @@
       }
     }
   }
+  .tours {
+    padding: 85px 0;
+    &__bg__container {
+      max-width: 720px;
+      &__row__col:nth-child(3) {
+        order: 2;
+      }
+    }
+  }
 }
 @media only screen and (min-width: 992px) {
   .way_travel {
@@ -257,6 +366,20 @@
       &__row__card {
         flex: 0 0 33.33333%;
         max-width: 33.33333%;
+      }
+    }
+  }
+  .tours {
+    padding: 100px 0;
+    &__bg__container {
+      max-width: 960px;
+      &__row__col {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        &__row__card {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
       }
     }
   }
@@ -325,9 +448,9 @@
       }
     }
   }
-  .tourse {
+  .tours {
     padding: 115px 0;
-    background-size: cover;
+    background-size: cover !important;
     padding-bottom: 130px;
     padding-top: 90px;
     &__bg {
@@ -344,13 +467,35 @@
       }
       &__container {
         max-width: 1200px;
-        &__row__col__description {
-          opacity: 0;
-          transform: translateY(120%);
-          transition: all ease 0.25s;
-          div {
-            font-size: 24px;
-            line-height: 1.25;
+        &__row__col {
+          &:nth-child(2) {
+            order: 2;
+          }
+          a {
+            &::before {
+              opacity: 0 !important;
+            }
+          }
+          &__description {
+            opacity: 0;
+            transform: translateY(120%);
+            transition: all ease 0.25s;
+            div {
+              font-size: 24px;
+              line-height: 1.25;
+            }
+          }
+          &__row__card {
+            a {
+              &::before {
+                opacity: 0;
+              }
+              &__description {
+                opacity: 0;
+                transform: translateY(120%);
+                transition: all ease 0.25s;
+              }
+            }
           }
         }
       }
@@ -366,5 +511,14 @@
 @media only screen and (max-width: 1200px) {
   .way_travel {
     background: none !important;
+  }
+  .tours {
+    background: none !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .tours__bg__container__row__col:nth-child(2) {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
