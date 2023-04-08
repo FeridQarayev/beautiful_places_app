@@ -1,34 +1,163 @@
-#login__bg__image{
-    background: url(../../images/login/ballon.png) center center no-repeat fixed;
-    background-size: cover;
-    min-height: 100vh;
-    width: 100%
+#login__bg__image {
+  background: url(../../images/login/ballon.png) center center no-repeat fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
 }
 
-#login aside  {
-    width: 430px;
-    padding: 45px 60px 60px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    overflow-y: auto;
-    background-color: #f5f4bb80;
-    min-height: 100vh;
+#login aside {
+  width: 430px;
+  padding: 45px 60px 60px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  background-color: #fff;
+  min-height: 100vh;
 }
 
-#login figure  {
-    text-align: center;
-    border-bottom: 1px solid #ededed;
-    margin: -45px -60px 25px;
-    padding: 20px 60px 25px;
+#login figure {
+  text-align: center;
+  border-bottom: 1px solid #ededed;
+  margin: -45px -60px 25px;
+  padding: 20px 60px 25px;
 }
 #login figure a {
-    color: #fc5b62;
-    text-decoration: none;
-    transition: all .3s ease-in-out;
-    outline: none;
+  color: #fc5b62;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  outline: none;
 }
 .login__img {
-    vertical-align: middle;
+  vertical-align: middle;
+}
+#login aside form {
+  margin-bottom: 60px;
+  display: block;
+}
+.social__context1 {
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  min-width: 200px;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 10px;
+  line-height: 1;
+  position: relative;
+  background-color: #3b5998;
+  gap: 60px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.social__context1:hover {
+  background: #4165b4;
+  color: #fff;
+}
+.social__context2 {
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  min-width: 200px;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 10px;
+  line-height: 1;
+  position: relative;
+  background-color: #dc4e41;
+  gap: 60px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.social__context2:hover {
+  background-color: #fc5b62;
+}
+.social__context3 {
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  min-width: 200px;
+  margin-bottom: 10px;
+  display: flex;
+  padding: 10px;
+  line-height: 1;
+  position: relative;
+  background-color: #0077b5;
+  gap: 60px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.social__context3:hover {
+  background-color: #0e83c2;
+}
+
+.access__social {
+  margin-top: 45px;
+}
+.access__social a {
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+.access__social svg {
+  width: 15px;
+  fill: #fff;
+  top: 12px;
+}
+.divider{
+    text-align: center;
+    height: 1px;
+    margin: 30px 0 20px;
+    background-color: #e1e8ed;
+}
+.divider span {
+    position: relative;
+    top: -20px;
+    background-color: #fff;
+    display: inline-block;
+    padding: 10px;
+    font-style: italic;
+}
+.form__group{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.form__group label{
+    font-weight: 500;
+    margin-bottom: 3px;
+    font-size: .875rem;
+    line-height: 1.6;
+    font-family: "Poppins",Helvetica,sans-serif;
+    color: #555;
+}
+.form__control{
+    padding: 10px;
+    height: 42px;
+    font-size: .875rem;
+    border-radius: 3px;
+    border: 1px solid #d2d8dd;
+    color: #495057;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    appearance: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding-left: 40px;
+}
+.form__group svg{
     
+    font-size: 1.3125rem;
+    position: absolute;
+    left: 12px;
+    top: 34px;
+    fill: #ccc;
+    width: 25px;
+    height: 25px;
+    display: block;
+    font-weight: 400!important;
 }
