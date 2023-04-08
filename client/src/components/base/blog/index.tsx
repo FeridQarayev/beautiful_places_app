@@ -4,7 +4,7 @@ import BlogPosts2 from '../../../images/blog_posts/blog-post-2.jpg';
 import BlogPosts3 from '../../../images/blog_posts/blog-post-3.jpg';
 import styles from './style.module.scss';
 
-function Footer(): JSX.Element {
+function Blogs(): JSX.Element {
   return (
     <section className={styles.blog__posts}>
       <div className={styles.container}>
@@ -67,4 +67,4 @@ function Footer(): JSX.Element {
   );
 }
 
-export default Footer;
+export default Blogs;

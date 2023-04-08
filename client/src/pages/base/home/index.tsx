@@ -2,6 +2,7 @@ import AOS from 'aos';
 import React, { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
+import Blogs from '../../../components/base/blog';
 import HomeSlider from '../../../components/base/slider';
 import style from './style.module.scss';
 
@@ -154,6 +155,8 @@ function Home(): JSX.Element {
           </div>
         </div>
       </section>
+
+      <Blogs />
     </React.Fragment>
   );
 }
