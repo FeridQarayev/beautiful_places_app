@@ -21,6 +21,9 @@
   font-style: italic;
   font-weight: 300;
 }
+.region_slider__content {
+  position: relative;
+}
 .region {
   width: 300px;
   position: relative;
@@ -191,4 +194,25 @@
   .title span {
     margin: -3px 0 0;
   }
+}
+
+.slider_left {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translate(-10px, -50%);
+  width: 25px;
+  cursor: pointer;
+}
+.slider_left:hover,
+.slider_right:hover svg {
+  fill: #ff595a;
+}
+.slider_right {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(10px, -50%);
+  width: 25px;
+  cursor: pointer;
 }
