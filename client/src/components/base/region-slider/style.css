@@ -93,5 +93,90 @@
   transition: opacity 0.3s, transform 0.3s;
   transform: scale(0.94);
   width: 100%;
-  z-index: 20;
+  z-index: 50;
+}
+.region_up {
+  height: 50px;
+}
+.region_down h3 {
+  border-width: 0 0 1px;
+  transition: border-color 0.3s;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.15;
+  margin: 0 10px 16px 0;
+  color: #ffc72c;
+}
+.region_down p {
+  font-size: 15px;
+  font-weight: 500;
+}
+.region_down p span {
+  color: #ffc72c;
+  font-size: 15px;
+  font-weight: 500;
+}
+.region_footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: flex-start;
+  font: 300 italic 17px/1.24 'Publico', 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+  margin: 24px 0 -2px;
+}
+.region_footer_left {
+  border-top: 1px solid #fff;
+  padding: 20px 0 0;
+}
+.region_heart_logo {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  height: 42px;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  width: 42px;
+}
+.region_heart_logo svg {
+  fill: #fff;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Hover */
+.region:hover {
+  transform: scale(1.06);
+}
+.region:hover .region_media > p {
+  display: none;
+}
+.region:hover .region_media::before {
+  opacity: 1;
+}
+.region:hover .region_hover {
+  opacity: 1;
+}
+.region_heart_logo:hover {
+  background: #a6c042;
+}
+
+/* WishlistedActive */
+.added {
+  background: #a6c042;
+}
+.added::after {
+  content: '';
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 24px;
+  background: url('../../../svgs/icon-check-custom.svg') no-repeat !important;
 }
