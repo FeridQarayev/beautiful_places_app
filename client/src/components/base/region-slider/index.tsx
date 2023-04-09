@@ -19,8 +19,22 @@ function RegionSlider(): JSX.Element {
             navigation={true}
             slidesPerView={4}
             spaceBetween={0}
-            pagination={{
-              clickable: true,
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              576: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              1400: {
+                slidesPerView: 4,
+              },
+              1700: {
+                slidesPerView: 5,
+              },
             }}
             modules={[Navigation]}
             className="mySwiper"

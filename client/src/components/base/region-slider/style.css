@@ -180,3 +180,15 @@
   width: 24px;
   background: url('../../../svgs/icon-check-custom.svg') no-repeat !important;
 }
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .title {
+    white-space: inherit;
+    padding: 0 0 27px;
+    text-align: left;
+  }
+  .title span {
+    margin: -3px 0 0;
+  }
+}
