@@ -133,6 +133,9 @@ $background-color_8: #fff;
 .form__group {
   position: relative;
   margin-bottom: 1rem;
+  div {
+    position: relative;
+  }
   label {
     font-weight: 500;
     margin-bottom: 3px;
