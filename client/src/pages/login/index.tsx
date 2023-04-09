@@ -81,6 +81,7 @@ function Login(): JSX.Element {
               </div>
             </div>
           </form>
+          <div className={style.copy}>© Panagea</div>
         </aside>
       </div>
     </div>
