@@ -168,7 +168,15 @@ $background-color_8: #fff;
   appearance: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   padding-left: 40px;
+  &:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
 }
+
 .toggle__button {
   position: absolute;
   right: 4px;
@@ -275,6 +283,10 @@ $background-color_8: #fff;
   line-height: 1;
   transition: all 0.3s ease-in-out;
   margin-top: 35px;
+  &:hover{
+    background: #0054a6;
+    color: #fff;
+  }
 }
 .new__login {
   margin-top: 10px;
