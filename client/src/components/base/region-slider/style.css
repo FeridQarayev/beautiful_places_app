@@ -1,0 +1,97 @@
+.region_slider {
+  margin: 97px 0;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1260px;
+  padding: 0 30px;
+}
+.title {
+  padding: 0 0 33px;
+  text-align: center;
+  white-space: nowrap;
+  color: #ff595a;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.title span {
+  color: #3c1053;
+  font-family: 'Publico', 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+  font-style: italic;
+  font-weight: 300;
+}
+.region {
+  width: 300px;
+  position: relative;
+  padding: 0.5px;
+  height: 100%;
+  vertical-align: top;
+  transition: transform 0.3s;
+  z-index: 5;
+}
+.region_media {
+  position: relative;
+  z-index: 1;
+}
+.region_media::before {
+  background: rgba(0, 174, 199, 0.9);
+  bottom: 0;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s;
+  width: 100%;
+  z-index: 10;
+}
+.region_media img {
+  max-width: none;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.region_media_text {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  filter: blur(35px);
+  background: rgba(0, 0, 0, 0.67);
+}
+.region_media p {
+  display: block;
+  position: absolute;
+  left: 17px;
+  bottom: 20px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.29;
+  max-width: 200px;
+  color: #fff;
+  z-index: 2;
+}
+.region_hover {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  padding: 0 15px 22px;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: scale(0.94);
+  width: 100%;
+  z-index: 20;
+}
