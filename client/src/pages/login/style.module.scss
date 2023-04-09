@@ -68,7 +68,7 @@ $background-color_8: #fff;
   &:nth-child(1) {
     background-color: $background-color_2;
     &:hover {
-      background: #4165b4;
+      filter: brightness(115%);
       color: $color_2;
     }
   }
@@ -88,13 +88,13 @@ $background-color_8: #fff;
       }
     }
     &:hover {
-      background-color: $background-color_4;
+      filter: brightness(115%);
     }
   }
   &:nth-child(3) {
     background-color: $background-color_5;
     &:hover {
-      background-color: $background-color_6;
+      filter: brightness(115%);
     }
   }
 }
