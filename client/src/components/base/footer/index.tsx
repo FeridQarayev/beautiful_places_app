@@ -1,5 +1,5 @@
 import React from 'react';
-import footer from '../../../images/footer/BackpackStory.png';
+import footer from '../../../images/footer/Travel-agency-logo-design-template-on-transparent-background-PNG.png';
 import { ReactComponent as FacebookSvg } from '../../../svgs/facebook.svg';
 import { ReactComponent as InstagramSvg } from '../../../svgs/instagram.svg';
 import { ReactComponent as PinterestSvg } from '../../../svgs/pinterest.svg';

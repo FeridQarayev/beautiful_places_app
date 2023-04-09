@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../images/navbar/logo-default-225x39.png';
+import logo from '../../../images/footer/Travel-agency-logo-design-template-on-transparent-background-PNG.png';
 import { ReactComponent as DownSvg } from '../../../svgs/angle-down-solid.svg';
 import { ReactComponent as RightSvg } from '../../../svgs/angle-right-solid.svg';
 import style from './style.module.scss';
@@ -32,7 +32,7 @@ function Navbar(): JSX.Element {
           <div className={style.navbar__content__container__logo}>
             <div className={style.navbar__content__container__logo__main}>
               <Link to={'home'}>
-                <img src={logo} alt="Logo" />
+                <img src={logo} alt="Logo" className={style.navbar__content__container__logo__main__icon} />
               </Link>
             </div>
           </div>
