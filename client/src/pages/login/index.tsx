@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
-import login from '../../images/footer/BackpackStory.png';
+import login from '../../images/footer/Travel-agency-logo-design-template-on-transparent-background-PNG.png';
 import { ReactComponent as EmailSvg } from '../../svgs/email.svg';
 import { ReactComponent as FacebookSvg } from '../../svgs/facebook-f.svg';
 import { ReactComponent as GooglePlusSvg } from '../../svgs/google_google plus_google+_icon .svg';
@@ -26,7 +26,7 @@ function Login(): JSX.Element {
       <div id={style.login}>
         <aside>
           <figure>
-            <a href="#">
+            <a href="home">
               <img src={login} className={style.login__img} />
             </a>
           </figure>
