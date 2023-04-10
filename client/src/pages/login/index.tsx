@@ -15,6 +15,11 @@ const LoginSchema = Yup.object({
 });
 
 function Login(): JSX.Element {
+  const changeInputType = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    const passwordTag = e.currentTarget.previousElementSibling?.previousElementSibling;
+    passwordTag instanceof HTMLInputElement && (passwordTag.type = passwordTag.type == 'text' ? 'password' : 'text');
+  };
+
   return (
     <div id={style.login__bg__image}>
       <div className={style.login__bg__image}></div>
@@ -69,7 +74,7 @@ function Login(): JSX.Element {
                       <label htmlFor="password">Password</label>
                       <Field type="password" name="password" className={style.form__control} />
                       <LockSvg />
-                      <button type="button" role="button" className={style.toggle__button}>
+                      <button type="button" role="button" onClick={changeInputType} className={style.toggle__button}>
                         Show
                       </button>
                     </div>
