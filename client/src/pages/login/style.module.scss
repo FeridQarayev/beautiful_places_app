@@ -22,7 +22,7 @@ $background-color_8: #fff;
   width: 100%;
   position: fixed;
 }
-.login__img{
+.login__img {
   width: 120px;
 }
 #login {
@@ -115,8 +115,8 @@ $background-color_8: #fff;
     top: 12px;
   }
 }
-.error{
-  color:red;
+.error {
+  color: red;
 }
 .divider {
   text-align: center;
@@ -325,4 +325,48 @@ $background-color_8: #fff;
   width: 100%;
   color: #999;
   font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+  #login figure {
+    margin: -30px -30px 20px;
+    padding: 15px 60px 20px;
+  }
+  #login aside {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .access__social {
+    margin-top: 30px;
+  }
+
+  .access__social a {
+    position: absolute;
+    transform: translate(240px);
+  }
+}
+@media screen and (max-width: 658px) {
+  .access__social a {
+    position: absolute;
+    transform: translate(190px);
+  }
+}
+@media screen and (max-width: 425px) {
+  .access__social a {
+    position: absolute;
+    transform: translate(100px);
+  }
+}
+@media screen and (max-width: 324px) {
+  .access__social a {
+    position: absolute;
+    transform: translate(50px);
+  }
+}
+@media screen and (max-width: 285px) {
+  .access__social a {
+    position: absolute;
+    transform: translate(40px);
+  }
 }
