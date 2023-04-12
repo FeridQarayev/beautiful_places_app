@@ -167,6 +167,7 @@ const REGIONS: IRegion[] = [
 function RegionSlider(): JSX.Element {
   const swiperRef = React.useRef<SwiperModel>();
   const [regions, setRegions] = React.useState<IRegion[]>([]);
+  const wishlists: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
 
   React.useEffect(() => {
     setRegions(REGIONS);
@@ -208,7 +209,10 @@ function RegionSlider(): JSX.Element {
           >
             {regions.map((reg) => (
               <SwiperSlide key={reg.id}>
-                <RegionSliderItem region={reg} />
+                <RegionSliderItem
+                  region={reg}
+                  isLiked={wishlists?.find((x) => x.id == reg.id) === undefined ? false : true}
+                />
               </SwiperSlide>
             ))}
           </Swiper>
