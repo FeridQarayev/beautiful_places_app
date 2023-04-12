@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 import Blogs from '../../../components/base/blog';
+import RegionSlider from '../../../components/base/region-slider';
 import HomeSlider from '../../../components/base/slider';
 import style from './style.module.scss';
 
@@ -59,6 +60,8 @@ function Home(): JSX.Element {
           </div>
         </div>
       </section>
+
+      <RegionSlider />
 
       <section className={style.advantages}>
         <div className={style.advantages__container}>
