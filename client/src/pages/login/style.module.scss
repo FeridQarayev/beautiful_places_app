@@ -56,53 +56,10 @@ $background-color_8: #fff;
 .login__img {
   vertical-align: middle;
 }
-.social__context {
-  border-radius: 3px;
-  text-align: center;
-  color: $color_2;
-  min-width: 200px;
-  margin-bottom: 10px;
-  display: flex;
-  padding: 10px;
-  line-height: 1;
-  gap: 60px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  &:nth-child(1) {
-    background-color: $background-color_2;
-    &:hover {
-      filter: brightness(115%);
-      color: $color_2;
-    }
-  }
-  &:nth-child(2) {
-    background-color: $background-color_3;
-    .social__context__svg {
-      position: relative;
-      display: block;
-      height: 22px;
-      width: 15px;
-      svg {
-        position: absolute;
-        width: 30px;
-        top: 50%;
-        left: 70%;
-        transform: translate(-50%, -50%);
-      }
-    }
-    &:hover {
-      filter: brightness(115%);
-    }
-  }
-  &:nth-child(3) {
-    background-color: $background-color_5;
-    &:hover {
-      filter: brightness(115%);
-    }
-  }
-}
+
 .access__social {
   margin-top: 45px;
+
   a {
     color: $color_2;
     font-size: 0.875rem;
@@ -136,6 +93,7 @@ $background-color_8: #fff;
 .form__group {
   position: relative;
   margin-bottom: 1rem;
+
   div {
     position: relative;
   }
@@ -158,11 +116,11 @@ $background-color_8: #fff;
     width: 25px;
     height: 25px;
     display: block;
-    font-weight: 400 !important;
+    margin-right: 10px;
   }
 }
 .form__control {
-  padding: 10px;
+  padding: 10px 10px 10px 50px;
   height: 42px;
   font-size: 0.875rem;
   border-radius: 3px;
@@ -176,7 +134,6 @@ $background-color_8: #fff;
   background-clip: padding-box;
   appearance: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  padding-left: 40px;
   &:focus {
     color: #212529;
     background-color: #fff;
@@ -186,16 +143,81 @@ $background-color_8: #fff;
   }
 }
 
+.access__social {
+  margin-top: 45px;
+  a {
+    border-radius: 3px;
+    text-align: center;
+    color: #fff;
+    min-width: 200px;
+    margin-bottom: 15px;
+    display: block;
+    padding: 12px;
+    line-height: 1;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    svg {
+      font-family: 'ElegantIcons';
+      position: absolute;
+      left: 12px;
+      top: 10px;
+      font-size: 1rem;
+    }
+
+    &:nth-child(1) {
+      background-color: $background-color_2;
+
+      &:hover {
+        filter: brightness(115%);
+        color: $color_2;
+      }
+    }
+    &:nth-child(2) {
+      background-color: $background-color_3;
+      .social__context__svg {
+        position: relative;
+        display: block;
+        height: -4px;
+        width: 10px;
+        svg {
+          position: absolute;
+          width: 25px;
+          top: 50%;
+          left: 70%;
+          transform: translate(-50%, -50%);
+          margin-top: 7px;
+        }
+      }
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+    &:nth-child(3) {
+      background-color: $background-color_5;
+
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+  }
+}
+.toggle__button:hover,
+.toggle__button:focus {
+  background-color: #eee;
+  color: #555;
+  outline: transparent;
+}
 .toggle__button {
   position: absolute;
-  right: 4px;
+  right: 0px;
   top: 50%;
   margin-top: -15px;
+  display: none;
   background: transparent;
   border: 0;
-  cursor: pointer;
   border-radius: 3px;
-  color: $color_5;
+  color: #888;
   font-size: 0.625rem;
   font-weight: 700;
   margin-right: 5px;
@@ -203,9 +225,7 @@ $background-color_8: #fff;
   line-height: 30px;
   padding: 0 10px;
   text-transform: uppercase;
-  background-color: $background-color_8;
-  margin: 0;
-  font-family: $font-family_2;
+  background-color: #fff;
 }
 .clearfix__left {
   margin-bottom: 30px;
@@ -265,7 +285,6 @@ $background-color_8: #fff;
     top: -3px;
     color: $color_6;
     font-weight: 500;
-    font-size: 13px;
     font-size: 0.8125rem;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -339,34 +358,5 @@ $background-color_8: #fff;
 
   .access__social {
     margin-top: 30px;
-  }
-
-  .access__social a {
-    position: absolute;
-    transform: translate(240px);
-  }
-}
-@media screen and (max-width: 658px) {
-  .access__social a {
-    position: absolute;
-    transform: translate(190px);
-  }
-}
-@media screen and (max-width: 425px) {
-  .access__social a {
-    position: absolute;
-    transform: translate(100px);
-  }
-}
-@media screen and (max-width: 324px) {
-  .access__social a {
-    position: absolute;
-    transform: translate(50px);
-  }
-}
-@media screen and (max-width: 285px) {
-  .access__social a {
-    position: absolute;
-    transform: translate(40px);
   }
 }

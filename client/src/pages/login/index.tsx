@@ -18,6 +18,7 @@ function Login(): JSX.Element {
   const changeInputType = (e: React.MouseEvent<HTMLButtonElement>): void => {
     const passwordTag = e.currentTarget.previousElementSibling?.previousElementSibling;
     passwordTag instanceof HTMLInputElement && (passwordTag.type = passwordTag.type == 'text' ? 'password' : 'text');
+    passwordTag instanceof HTMLInputElement && (passwordTag.style.display = 'block');
   };
 
   return (
@@ -40,26 +41,23 @@ function Login(): JSX.Element {
             {(): JSX.Element => (
               <Form>
                 <div className={style.access__social}>
-                  <div className={style.social__context}>
+                  <a href="https://www.facebook.com/" className={style.social__facebook}>
                     <FacebookSvg />
-                    <a href="https://www.facebook.com/" className={style.social__facebook}>
-                      Login with Facebook
-                    </a>
-                  </div>
-                  <div className={style.social__context}>
+                    Login with Facebook
+                  </a>
+
+                  <a href="https://www.google.com/" className={style.social__google}>
                     <div className={style.social__context__svg}>
                       <GooglePlusSvg />
                     </div>
-                    <a href="https://www.google.com/" className={style.social__google}>
-                      Login with Google
-                    </a>
-                  </div>
-                  <div className={style.social__context}>
+                    Login with Google
+                  </a>
+
+                  <a href="https://www.linkedin.com/" className={style.social__linkedin}>
                     <LinkedinSvg />
-                    <a href="https://www.linkedin.com/" className={style.social__linkedin}>
-                      Login with Linkedin
-                    </a>
-                  </div>
+                    Login with Linkedin
+                  </a>
+
                   <div className={style.divider}>
                     <span>Or</span>
                   </div>
