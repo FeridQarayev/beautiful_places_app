@@ -296,7 +296,11 @@
             text-align: left;
             display: block;
             &:hover {
-              a {
+              & > a {
+                color: #1e2227 !important;
+                background: #ffffff !important;
+              }
+              & > span > a {
                 color: #1e2227 !important;
                 background: #ffffff !important;
               }
@@ -334,6 +338,10 @@
               overflow: hidden;
               li {
                 a {
+                  &:hover {
+                    color: #1e2227 !important;
+                    background: #ffffff !important;
+                  }
                   padding-left: 30px;
                 }
               }
