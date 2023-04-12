@@ -1,14 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/navbar/logo-default-225x39.png';
+import IRegion from '../../../interfaces/region';
 import { ReactComponent as DownSvg } from '../../../svgs/angle-down-solid.svg';
 import { ReactComponent as RightSvg } from '../../../svgs/angle-right-solid.svg';
+import { ReactComponent as HeartSvg } from '../../../svgs/heart-regular.svg';
 import style from './style.module.scss';
 
 function Navbar(): JSX.Element {
   const menu = useRef<HTMLDivElement>(null);
   const drop = useRef<HTMLUListElement>(null);
   const content = useRef<HTMLDivElement>(null);
+  // const regions: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
+  // const count = regions !== null ? regions.length : 0;
 
   const burgerMenu = (element: HTMLButtonElement): void => {
     element.classList.toggle(style.burger__active);
@@ -71,6 +75,13 @@ function Navbar(): JSX.Element {
                 <Link to={'#'}>Login</Link>
               </li>
             </ul>
+
+            <div className={style.navbar__content__container__elements__icons}>
+              <div className={style.navbar__content__container__elements__icons__wishlist}>
+                <span>0</span>
+                <HeartSvg />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -83,6 +94,12 @@ function Navbar(): JSX.Element {
             <Link to={'home'}>
               <img src={logo} alt="Logo" />
             </Link>
+          </div>
+          <div className={style.navbar__mobile__panel__icon}>
+            <div className={style.navbar__mobile__panel__icon__wishlist}>
+              <span>0</span>
+              <HeartSvg />
+            </div>
           </div>
         </div>
         <div className={style.navbar__mobile__elements}>
