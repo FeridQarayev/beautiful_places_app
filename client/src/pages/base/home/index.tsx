@@ -67,25 +67,25 @@ function Home(): JSX.Element {
         <div className={style.advantages__container}>
           <div className={style.advantages__container__row}>
             <div data-aos="fade-up" data-aos-delay="200" className={style.advantages__container__row__card}>
-              <h2>01. best Hotels</h2>
+              <h2>01. Ən yaxşı otellər</h2>
               <p>
-                We guarantee the best hotels and very comfortable rooms, which will be appreciated by every traveller.
-                You will be absolutely happy with the hotel and will have a wonderful vacation there.
+                Biz hər bir səyahətçi tərəfindən qiymətləndiriləcək ən yaxşı otellərə və çox rahat otaqlara zəmanət
+                veririk. Siz oteldən tam razı qalacaqsınız və orada gözəl istirahət edəcəksiniz.
               </p>
             </div>
             <div data-aos="fade-up" data-aos-delay="300" className={style.advantages__container__row__card}>
-              <h2>02. Tourist Guide</h2>
+              <h2>02. Turist Bələdçisi</h2>
               <p>
-                We provide our clients with such a service as Tourist Guide. Its main goal is to ensure people with all
-                necessary information any time it is needed. This service is similar to Customer Support with emphasis
-                on travelling.
+                Biz müştərilərimizə Turist Bələdçisi kimi bir xidmət təqdim edirik. Onun əsas məqsədi insanlara lazım
+                olan istənilən vaxt lazımi məlumatı çatdırmaqdır. Bu xidmət səyahətə xüsusi diqqət yetirməklə Müştəri
+                Dəstəyi xidmətinə bənzəyir.
               </p>
             </div>
             <div data-aos="fade-up" data-aos-delay="400" className={style.advantages__container__row__card}>
-              <h2>03. Flights Tickets</h2>
+              <h2>03. Uçuş biletləri</h2>
               <p>
-                You can book tickets on any plane online via our booking system. Here you have an opportunity to select
-                your transport operator. Our representatives will help you with the details.
+                İstənilən təyyarəyə biletləri bron sistemimiz vasitəsilə onlayn sifariş edə bilərsiniz. Burada sizin
+                nəqliyyat operatorunuzu seçmək imkanınız var. Nümayəndələrimiz sizə təfərrüatlarda kömək edəcəklər.
               </p>
             </div>
           </div>
