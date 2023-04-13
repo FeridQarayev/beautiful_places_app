@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/navbar/logo-default-225x39.png';
 import IRegion from '../../../interfaces/region';
@@ -11,9 +11,14 @@ function Navbar(): JSX.Element {
   const menu = useRef<HTMLDivElement>(null);
   const drop = useRef<HTMLUListElement>(null);
   const content = useRef<HTMLDivElement>(null);
-  // const regions: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
-  // const count = regions !== null ? regions.length : 0;
+  const [regions, setRegion] = useState<IRegion[]>([]);
+  const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    const regions: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
+    setRegion(regions !== null ? regions : []);
+    setCount(regions !== null ? regions.length : 0);
+  }, [regions]);
   const burgerMenu = (element: HTMLButtonElement): void => {
     element.classList.toggle(style.burger__active);
     menu.current?.classList.toggle(style.menu__active);
@@ -78,7 +83,7 @@ function Navbar(): JSX.Element {
 
             <div className={style.navbar__content__container__elements__icons}>
               <div className={style.navbar__content__container__elements__icons__wishlist}>
-                <span>0</span>
+                <span>{count}</span>
                 <HeartSvg />
               </div>
             </div>
@@ -97,7 +102,7 @@ function Navbar(): JSX.Element {
           </div>
           <div className={style.navbar__mobile__panel__icon}>
             <div className={style.navbar__mobile__panel__icon__wishlist}>
-              <span>0</span>
+              <span>{count}</span>
               <HeartSvg />
             </div>
           </div>
