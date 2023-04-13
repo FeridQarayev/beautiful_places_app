@@ -14,13 +14,20 @@ const LoginSchema = Yup.object({
   password: Yup.string().min(6, 'Password must be at least 6 characters').required('Required'),
 });
 
-function Login(): JSX.Element {
-  const changeInputType = (e: React.MouseEvent<HTMLButtonElement>): void => {
-    const passwordTag = e.currentTarget.previousElementSibling?.previousElementSibling;
-    passwordTag instanceof HTMLInputElement && (passwordTag.type = passwordTag.type == 'text' ? 'password' : 'text');
-    passwordTag instanceof HTMLInputElement && (passwordTag.style.display = 'block');
-  };
+const showButton = (e: React.MouseEvent<HTMLButtonElement>): void => {
+  const buttonElement = e.currentTarget.nextElementSibling?.nextElementSibling;
+  buttonElement instanceof HTMLButtonElement && (buttonElement.style.display = 'block');
+};
 
+const changeInputType = (e: React.MouseEvent<HTMLButtonElement>): void => {
+  const passwordTag = e.currentTarget.previousElementSibling?.previousElementSibling;
+  if (passwordTag instanceof HTMLInputElement) {
+    passwordTag.type = passwordTag.type == 'text' ? 'password' : 'text';
+    e.currentTarget.textContent = e.currentTarget.textContent === 'Hide' ? 'Show' : 'Hide';
+  }
+};
+
+function Login(): JSX.Element {
   return (
     <div id={style.login__bg__image}>
       <div className={style.login__bg__image}></div>
@@ -70,7 +77,7 @@ function Login(): JSX.Element {
                   <div className={style.form__group}>
                     <div>
                       <label htmlFor="password">Password</label>
-                      <Field type="password" name="password" className={style.form__control} />
+                      <Field type="password" name="password" onClick={showButton} className={style.form__control} />
                       <LockSvg />
                       <button type="button" role="button" onClick={changeInputType} className={style.toggle__button}>
                         Show
