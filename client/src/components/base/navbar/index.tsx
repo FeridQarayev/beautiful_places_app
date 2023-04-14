@@ -1,15 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/footer/Travel-agency-logo-design-template-on-transparent-background-PNG.png';
+import IRegion from '../../../interfaces/region';
 import { ReactComponent as DownSvg } from '../../../svgs/angle-down-solid.svg';
 import { ReactComponent as RightSvg } from '../../../svgs/angle-right-solid.svg';
+import { ReactComponent as HeartSvg } from '../../../svgs/heart-regular.svg';
 import style from './style.module.scss';
 
 function Navbar(): JSX.Element {
   const menu = useRef<HTMLDivElement>(null);
   const drop = useRef<HTMLUListElement>(null);
   const content = useRef<HTMLDivElement>(null);
+  const [regions, setRegion] = useState<IRegion[]>([]);
+  const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    const regions: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
+    setRegion(regions !== null ? regions : []);
+    setCount(regions !== null ? regions.length : 0);
+  }, [regions]);
   const burgerMenu = (element: HTMLButtonElement): void => {
     element.classList.toggle(style.burger__active);
     menu.current?.classList.toggle(style.menu__active);
@@ -39,13 +48,10 @@ function Navbar(): JSX.Element {
           <div className={style.navbar__content__container__elements}>
             <ul className={style.navbar__content__container__elements__list}>
               <li className={style.navbar__content__container__elements__list__item}>
-                <Link to={'#'}>Home</Link>
+                <Link to={'#'}>Ana Səhifə</Link>
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
-                <Link to={'#'}>About</Link>
-              </li>
-              <li className={style.navbar__content__container__elements__list__item}>
-                <Link to={'#'}>Tours</Link>
+                <Link to={'#'}>Məkanlar</Link>
                 <div className={style.navbar__content__container__elements__list__item__icon}>
                   <DownSvg />
                 </div>
@@ -53,7 +59,13 @@ function Navbar(): JSX.Element {
                   <li>
                     <Link to={'#'}>
                       <RightSvg />
-                      Single Tour
+                      Bölgələr
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={'#'}>
+                      <RightSvg />
+                      Yerlər
                     </Link>
                   </li>
                 </ul>
@@ -62,12 +74,19 @@ function Navbar(): JSX.Element {
                 <Link to={'#'}>Services</Link>
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
-                <Link to={'#'}>Pages</Link>
+                <Link to={'#'}>Haqqımızda</Link>
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
-                <Link to={'#'}>Contacts</Link>
+                <Link to={'#'}>Login</Link>
               </li>
             </ul>
+
+            <div className={style.navbar__content__container__elements__icons}>
+              <div className={style.navbar__content__container__elements__icons__wishlist}>
+                <span>{count}</span>
+                <HeartSvg />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -81,28 +100,34 @@ function Navbar(): JSX.Element {
               <img src={logo} alt="Logo" />
             </Link>
           </div>
+          <div className={style.navbar__mobile__panel__icon}>
+            <div className={style.navbar__mobile__panel__icon__wishlist}>
+              <span>{count}</span>
+              <HeartSvg />
+            </div>
+          </div>
         </div>
         <div className={style.navbar__mobile__elements}>
           <div ref={menu} className={style.navbar__mobile__elements__content}>
             <nav className={style.navbar__mobile__elements__content__list}>
               <li className={style.navbar__mobile__elements__content__list__item}>
                 <Link className={style.dropdown__active__link} to={'#'}>
-                  Home
+                  Ana Səhifə
                 </Link>
               </li>
               <li className={style.navbar__mobile__elements__content__list__item}>
-                <Link to={'#'}>About</Link>
-              </li>
-              <li className={style.navbar__mobile__elements__content__list__item}>
                 <span>
-                  <Link to={'#'}>Tours</Link>
+                  <Link to={'#'}>Məkanlar</Link>
                   <div onClick={(e): void => dropdown(e.currentTarget)}>
                     <DownSvg />
                   </div>
                 </span>
                 <ul ref={drop} className={style.navbar__mobile__elements__content__list__item__dropdown}>
                   <li>
-                    <Link to={'#'}>Single Tour</Link>
+                    <Link to={'#'}>Bölgələr</Link>
+                  </li>
+                  <li>
+                    <Link to={'#'}>Yerlər</Link>
                   </li>
                 </ul>
               </li>
@@ -110,10 +135,10 @@ function Navbar(): JSX.Element {
                 <Link to={'#'}>Services</Link>
               </li>
               <li className={style.navbar__mobile__elements__content__list__item}>
-                <Link to={'#'}>Pages</Link>
+                <Link to={'#'}>Haqqımızda</Link>
               </li>
               <li className={style.navbar__mobile__elements__content__list__item}>
-                <Link to={'#'}>Contacts</Link>
+                <Link to={'#'}>Login</Link>
               </li>
             </nav>
           </div>

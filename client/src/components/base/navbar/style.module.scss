@@ -178,6 +178,55 @@
             }
           }
         }
+        &__icons {
+          padding-left: 28px;
+          position: relative;
+          margin-left: 30px;
+          display: inline-flex;
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 22px;
+            width: 1px;
+            background-color: rgba(255, 255, 255, 0.6);
+          }
+          &__wishlist {
+            display: inline-flex;
+            cursor: pointer;
+            color: #ffffff;
+            font-weight: 900;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            transition: all ease 0.3s;
+            position: relative;
+            &:hover {
+              color: #c4eeec;
+              border: 1px solid #c4eeec;
+              padding: 10px;
+            }
+            svg {
+              width: 23px;
+              fill: #ffffff;
+            }
+            span {
+              background: #e35e5a;
+              border: 2px solid #fff;
+              border-radius: 100%;
+              color: #fff;
+              font-size: 10px;
+              font-weight: 800;
+              line-height: 17px;
+              position: absolute;
+              right: -13px;
+              text-align: center;
+              top: -9px;
+              width: 21px;
+            }
+          }
+        }
       }
     }
   }
@@ -265,6 +314,35 @@
           height: auto;
         }
       }
+      &__icon {
+        z-index: 1082;
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: 15px;
+        &__wishlist {
+          cursor: pointer;
+          position: relative;
+          transition: all ease 0.3s;
+          svg {
+            width: 23px;
+            fill: #ffffff;
+          }
+          span {
+            background: #e35e5a;
+            border: 2px solid #fff;
+            border-radius: 100%;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 800;
+            line-height: 17px;
+            position: absolute;
+            right: -13px;
+            text-align: center;
+            top: -9px;
+            width: 21px;
+          }
+        }
+      }
     }
     &__elements {
       position: absolute;
@@ -298,7 +376,11 @@
             text-align: left;
             display: block;
             &:hover {
-              a {
+              & > a {
+                color: #1e2227 !important;
+                background: #ffffff !important;
+              }
+              & > span > a {
                 color: #1e2227 !important;
                 background: #ffffff !important;
               }
@@ -336,6 +418,10 @@
               overflow: hidden;
               li {
                 a {
+                  &:hover {
+                    color: #1e2227 !important;
+                    background: #ffffff !important;
+                  }
                   padding-left: 30px;
                 }
               }

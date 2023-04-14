@@ -1,7 +1,7 @@
 import React from 'react';
-import BlogPosts1 from '../../../images/blog_posts/blog-post-1.jpg';
-import BlogPosts2 from '../../../images/blog_posts/blog-post-2.jpg';
-import BlogPosts3 from '../../../images/blog_posts/blog-post-3.jpg';
+import BlogPosts1 from '../../../images/blog_posts/16b90c23-c370-4b04-aa67-e383e55955f3.jpg';
+import BlogPosts2 from '../../../images/blog_posts/4ab582d3-79ee-46f1-93bf-1f82eeecdc0f.jpg';
+import BlogPosts3 from '../../../images/blog_posts/9520645d-b57f-4226-832b-da5368e297ce.jpg';
 import styles from './style.module.scss';
 
 function Blogs(): JSX.Element {
@@ -15,15 +15,15 @@ function Blogs(): JSX.Element {
               <img src={BlogPosts1} />
             </div>
             <div className={styles.container__card__content}>
-              <span>January 1,2021</span>
+              <span>Aprel 27,2023</span>
               <h5>
                 <a href="#" className={styles.container__link}>
-                  5 PLACES TO VISIT WINTER
+                  Formula 1 Azərbaycan Qran Prisi 2023
                 </a>
               </h5>
               <p>
-                New Year and Christmas holidays is a great occasion to travel somewhere. You can either go somewhere
-                with you family or friends, or even alone....
+                Şərq ilə Qərbin koloritinin cəmləşdiyi Bakı Formula 1 Azərbaycan Qran Prisinin 2023-cü il mövsümündə
+                mötəbər beynəlxalq idman yarışına ev sahibliyi edəcək.
               </p>
             </div>
           </div>
@@ -32,15 +32,16 @@ function Blogs(): JSX.Element {
               <img src={BlogPosts2} />
             </div>
             <div className={styles.container__card__content}>
-              <span>January 1,2021</span>
+              <span>Aprel 30,2023</span>
               <h5>
                 <a href="#" className={styles.container__link}>
-                  BUDGET TRIPS FOR WINTER BREAK
+                  “DZİVA” adlı sirk şousu
                 </a>
               </h5>
               <p>
-                Budget trip doesn’t mean boring! There are numerous places worth visiting even if you don’t have much
-                money. The golden sands of Florida and California...
+                Mart ayının 1-dən etibarən dünya sirk elitası Bakı Dövlət Sirkinə toplaşacaq. Azərbaycanlı sirk ustası
+                Allahverdi İsrafilovun təqdimatında “DZİVA” adlı sirk şousu hər bir tamaşaçını öz fərqliliyi ilə heyran
+                edəcək.
               </p>
             </div>
           </div>
@@ -49,15 +50,15 @@ function Blogs(): JSX.Element {
               <img src={BlogPosts3} />
             </div>
             <div className={styles.container__card__content}>
-              <span>January 1,2021</span>
+              <span>Aprel 22,2023</span>
               <h5>
                 <a href="#" className={styles.container__link}>
-                  WALKING TO MACHU PICCHU, PERU
+                  Edvin Marton konserti
                 </a>
               </h5>
               <p>
-                Machu Picchu is mysterious and attractive place for all tourists visiting Peru. If you agree to take
-                this path you need to know more information...
+                Konsertdə Edvin Marton Rok Simfonik albomunun ən böyük hitlərini ifa edəcək. Vivaldidən Metallica-ya
+                qədər bütün hit mahnılar səslənəcək.
               </p>
             </div>
           </div>
