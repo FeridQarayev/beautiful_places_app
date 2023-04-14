@@ -69,7 +69,7 @@ function Registr(): JSX.Element {
                   </div>
                 </div>
                 <div className={style.clearfix__left}>
-                  <button type="submit" className={style.registr__button}>
+                  <button type="submit" className={style.registr__button} >
                     Registr Now!
                   </button>
                   <div className={style.new__registr}>
