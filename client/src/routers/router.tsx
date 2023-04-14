@@ -3,6 +3,7 @@ import HomeAdmin from '../pages/admin/home';
 import BaseRoot from '../pages/base/BaseRoot';
 import Home from '../pages/base/home';
 import Tours from '../pages/base/tours';
+import Registr from '../pages/registr';
 
 export const ROUTES = [
   {
@@ -37,4 +38,5 @@ export const ROUTES = [
       },
     ],
   },
+  { path: '/registr', element: <Registr /> },
 ];
