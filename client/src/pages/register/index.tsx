@@ -80,7 +80,7 @@ function Register(): JSX.Element {
                       <Field type="password" name="confirmPassword" className={style.form__control} />
                       <LockSvg />
                     </div>
-                    <ErrorMessage name="password" component="div" className={style.error} />
+                    <ErrorMessage name="confirmPassword" component="div" className={style.error} />
                   </div>
                 </div>
                 <div className={style.clearfix__left}>
