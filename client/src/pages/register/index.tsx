@@ -12,13 +12,13 @@ const RegisterSchema = Yup.object({
     .matches(/^[A-Z][a-z]*([ ][A-Z][a-z]*)*$/, 'Invalid format! (For example:Jake)')
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
-    .required('Name is required'),
+    .required('Required'),
 
   lastName: Yup.string()
     .matches(/^[A-Z][a-z]*([ ][A-Z][a-z]*)*$/, 'Invalid format! (For example:Jackson)')
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
-    .required('Last Name is required'),
+    .required('Required'),
   email: Yup.string().email('Invalid email address').required('Required'),
   password: Yup.string().min(6, 'Password must be at least 6 characters').required('Required'),
   confirmePassword: Yup.string().min(6, 'Confirme Password must be at least 6 characters').required('Required'),
