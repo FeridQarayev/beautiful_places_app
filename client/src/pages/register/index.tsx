@@ -21,14 +21,11 @@ const RegisterSchema = Yup.object({
     .required('Required'),
   email: Yup.string().email('Invalid email address').required('Required'),
   password: Yup.string().min(6, 'Password must be at least 6 characters').required('Required'),
-  confirmePassword: Yup.string().min(6, 'Confirme Password must be at least 6 characters').required('Required'),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref('password')], 'Passwords must match')
+    .required('Required'),
 });
-const changeInputType = (e: React.MouseEvent<HTMLButtonElement>): void => {
-  const passwordTag = e.currentTarget.previousElementSibling?.previousElementSibling;
-  if (passwordTag instanceof HTMLInputElement) {
-    passwordTag.type = passwordTag.type == 'text' ? 'password' : 'text';
-};
-}
+
 function Register(): JSX.Element {
   return (
     <div id={style.register__bg__image}>
@@ -41,7 +38,7 @@ function Register(): JSX.Element {
             </a>
           </figure>
           <Formik
-            initialValues={{ email: '', password: '' ,  name: '' , lastName: '' , confirmePassword: ''  }}
+            initialValues={{ email: '', password: '', name: '', lastName: '', confirmePassword: '' }}
             validationSchema={RegisterSchema}
             onSubmit={(values): void => {
               console.log(values);
