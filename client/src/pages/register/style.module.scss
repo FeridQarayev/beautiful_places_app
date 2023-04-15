@@ -15,17 +15,17 @@ $background-color_6: #0e83c2;
 $background-color_7: #e1e8ed;
 $background-color_8: #fff;
 
-.registr__bg__image {
-  background: url(../../images/registr/registr_bg.jpg) center center no-repeat fixed;
+.register__bg__image {
+  background: url(../../images/register/register_bg.jpg) center center no-repeat fixed;
   background-size: cover;
   min-height: 100vh;
   width: 100%;
   position: fixed;
 }
-.registr__img {
+.register__img {
   width: 120px;
 }
-#registr {
+#register {
   aside {
     width: 430px;
     padding: 45px 60px 60px;
@@ -53,7 +53,7 @@ $background-color_8: #fff;
     }
   }
 }
-.registr__img {
+.register__img {
   vertical-align: middle;
 }
 
@@ -203,95 +203,12 @@ $background-color_8: #fff;
     }
   }
 }
-.toggle__button:hover,
-.toggle__button:focus {
-  background-color: #eee;
-  color: #555;
-  outline: transparent;
-}
-.toggle__button {
-  position: absolute;
-  right: 0px;
-  top: 50%;
-  display: none;
-  background: transparent;
-  border: 0;
-  border-radius: 3px;
-  color: #888;
-  font-size: 0.625rem;
-  font-weight: 700;
-  margin-right: 5px;
-  height: 30px;
-  line-height: 30px;
-  padding: 0 10px;
-  text-transform: uppercase;
-  background-color: #fff;
-}
+
 .clearfix__left {
   margin-bottom: 30px;
 }
-.clearfix__left__checkboxes {
-  float: left !important;
-}
-.clearfix__left__checkboxes__check {
-  position: relative;
-  padding-left: 30px;
-  line-height: 1.8;
-  margin-bottom: 5px;
-  cursor: pointer;
-  user-select: none;
-  font-family: $font-family_1;
-  label {
-    font-weight: 500;
-    color: $color_6;
-  }
-  input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    margin: 0;
-    font-family: $font-family_2;
-    font-size: inherit;
-    line-height: inherit;
-  }
-}
-.clearfix__left__checkboxes__checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  border: 1px solid #d2d8dd;
-  background-color: $background-color_8;
-  border-radius: 3px;
-  transition: all 0.3s ease-in-out;
-  &::after {
-    content: '';
-    position: absolute;
-    display: none;
-    left: 7px;
-    top: 3px;
-    width: 5px;
-    height: 10px;
-    border: solid #fff;
-    border-width: 0 2px 2px 0;
-  }
-}
-.clearfix__right {
-  margin-top: 0.25rem !important;
-  float: right !important;
-  a {
-    position: relative;
-    top: -3px;
-    color: $color_6;
-    font-weight: 500;
-    font-size: 0.8125rem;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    outline: none;
-  }
-}
-.registr__button {
+
+.register__button {
   border-radius: 25px !important;
   display: block;
   width: 100%;
@@ -316,7 +233,7 @@ $background-color_8: #fff;
     color: #fff;
   }
 }
-.new__registr {
+.new__register {
   margin-top: 10px;
   text-align: center !important;
   font-weight: 500;

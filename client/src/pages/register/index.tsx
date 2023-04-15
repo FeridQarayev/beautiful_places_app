@@ -1,32 +1,45 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React from 'react';
 import * as Yup from 'yup';
-import registr from '../../images/registr/Travel-agency-logo-design-template-on-transparent-background-PNG (1).png';
+import register from '../../images/register/Travel-agency-logo-design-template-on-transparent-background-PNG (1).png';
 import { ReactComponent as EmailSvg } from '../../svgs/email.svg';
 import { ReactComponent as LockSvg } from '../../svgs/lock.svg';
 import { ReactComponent as UserSvg } from '../../svgs/user-regular.svg';
 import style from './style.module.scss';
 
-const RegistrSchema = Yup.object({
+const RegisterSchema = Yup.object({
+  name: Yup.string()
+  .matches(/^[A-Z][a-z]*([ ][A-Z][a-z]*)*$/, 'Invalid format! (For example:Cristiano)')
+  .min(2, 'Too Short!')
+  .max(50, 'Too Long!')
+  .required('Name is required'),
+
+lastName: Yup.string()
+  .matches(/^[A-Z][a-z]*([ ][A-Z][a-z]*)*$/, 'Invalid format! ')
+  .min(2, 'Too Short!')
+  .max(50, 'Too Long!')
+  .required('Last Name is required'),
   email: Yup.string().email('Invalid email address').required('Required'),
   password: Yup.string().min(6, 'Password must be at least 6 characters').required('Required'),
-  ConfirmePassword: Yup.string().min(6, 'Confirme Password must be at least 6 characters').required('Required'),
+  confirmePassword: Yup.string().min(6, 'Confirme Password must be at least 6 characters').required('Required'),
 });
-
-function Registr(): JSX.Element {
+const changeInputType = (e: React.MouseEvent<HTMLButtonElement>): void => {
+  const passwordTag = e.currentTarget.previousElementSibling?.previousElementSibling;
+};
+function Register(): JSX.Element {
   return (
-    <div id={style.registr__bg__image}>
-      <div className={style.registr__bg__image}></div>
-      <div id={style.registr}>
+    <div id={style.register__bg__image}>
+      <div className={style.register__bg__image}></div>
+      <div id={style.register}>
         <aside>
           <figure>
             <a href="home">
-              <img src={registr} className={style.registr__img} />
+              <img src={register} className={style.register__img} />
             </a>
           </figure>
           <Formik
             initialValues={{ email: '', password: '' }}
-            validationSchema={RegistrSchema}
+            validationSchema={RegisterSchema}
             onSubmit={(values): void => {
               console.log(values);
             }}
@@ -36,13 +49,15 @@ function Registr(): JSX.Element {
                 <div className={style.access__social}>
                   <div className={style.form__group}>
                     <label htmlFor="name">Your Name</label>
-                    <Field type="name" name="name" className={style.form__control} />
+                    <Field type="text" name="name" className={style.form__control} />
                     <UserSvg />
+                    <ErrorMessage name="name" component="div" className={style.error} />
                   </div>
                   <div className={style.form__group}>
                     <label htmlFor="lastName">Your Last Name</label>
-                    <Field type="lastName" name="lastName" className={style.form__control} />
+                    <Field type="text" name="lastName" className={style.form__control} />
                     <UserSvg />
+                    <ErrorMessage name="lastName" component="div" className={style.error} />
                   </div>
                   <div className={style.form__group}>
                     <label htmlFor="email"> Your Email</label>
@@ -61,18 +76,18 @@ function Registr(): JSX.Element {
 
                   <div className={style.form__group}>
                     <div>
-                      <label htmlFor="ConfirmPassword">Confirm Password</label>
-                      <Field type="password" name="ConfirmPassword" className={style.form__control} />
+                      <label htmlFor="confirmPassword">Confirm Password</label>
+                      <Field type="password" name="confirmPassword" className={style.form__control} />
                       <LockSvg />
                     </div>
                     <ErrorMessage name="password" component="div" className={style.error} />
                   </div>
                 </div>
                 <div className={style.clearfix__left}>
-                  <button type="submit" className={style.registr__button} >
-                    Registr Now!
+                  <button type="submit" className={style.register__button}>
+                    Register Now!
                   </button>
-                  <div className={style.new__registr}>
+                  <div className={style.new__register}>
                     Already have an account?
                     <strong className={style.sign}>
                       <a href="/login"> Sign In</a>
@@ -89,4 +104,4 @@ function Registr(): JSX.Element {
   );
 }
 
-export default Registr;
+export default Register;
