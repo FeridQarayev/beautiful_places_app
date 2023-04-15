@@ -9,23 +9,26 @@ import style from './style.module.scss';
 
 const RegisterSchema = Yup.object({
   name: Yup.string()
-  .matches(/^[A-Z][a-z]*([ ][A-Z][a-z]*)*$/, 'Invalid format! (For example:Cristiano)')
-  .min(2, 'Too Short!')
-  .max(50, 'Too Long!')
-  .required('Name is required'),
+    .matches(/^[A-Z][a-z]*([ ][A-Z][a-z]*)*$/, 'Invalid format! (For example:Jake)')
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Name is required'),
 
-lastName: Yup.string()
-  .matches(/^[A-Z][a-z]*([ ][A-Z][a-z]*)*$/, 'Invalid format! ')
-  .min(2, 'Too Short!')
-  .max(50, 'Too Long!')
-  .required('Last Name is required'),
+  lastName: Yup.string()
+    .matches(/^[A-Z][a-z]*([ ][A-Z][a-z]*)*$/, 'Invalid format! (For example:Jackson)')
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Last Name is required'),
   email: Yup.string().email('Invalid email address').required('Required'),
   password: Yup.string().min(6, 'Password must be at least 6 characters').required('Required'),
   confirmePassword: Yup.string().min(6, 'Confirme Password must be at least 6 characters').required('Required'),
 });
 const changeInputType = (e: React.MouseEvent<HTMLButtonElement>): void => {
   const passwordTag = e.currentTarget.previousElementSibling?.previousElementSibling;
+  if (passwordTag instanceof HTMLInputElement) {
+    passwordTag.type = passwordTag.type == 'text' ? 'password' : 'text';
 };
+}
 function Register(): JSX.Element {
   return (
     <div id={style.register__bg__image}>
@@ -38,7 +41,7 @@ function Register(): JSX.Element {
             </a>
           </figure>
           <Formik
-            initialValues={{ email: '', password: '' }}
+            initialValues={{ email: '', password: '' ,  name: '' , lastName: '' , confirmePassword: ''  }}
             validationSchema={RegisterSchema}
             onSubmit={(values): void => {
               console.log(values);
