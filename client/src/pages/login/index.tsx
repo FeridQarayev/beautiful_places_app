@@ -105,7 +105,7 @@ function Login(): JSX.Element {
                   <div className={style.new__login}>
                     New to Login?
                     <strong className={style.sign}>
-                      <a href="#"> Sign up!</a>
+                      <a href="/register"> Sign up!</a>
                     </strong>
                   </div>
                 </div>

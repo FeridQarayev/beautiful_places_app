@@ -83,7 +83,7 @@ function Navbar(): JSX.Element {
                 <Link to={'#'}>Haqqımızda</Link>
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
-                <Link to={'#'}>Login</Link>
+                <Link to={'/login'}>Login</Link>
               </li>
             </ul>
 
@@ -144,7 +144,7 @@ function Navbar(): JSX.Element {
                 <Link to={'#'}>Haqqımızda</Link>
               </li>
               <li className={style.navbar__mobile__elements__content__list__item}>
-                <Link to={'#'}>Login</Link>
+                <Link to={'/login'}>Login</Link>
               </li>
             </nav>
           </div>

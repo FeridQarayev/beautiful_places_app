@@ -3,8 +3,8 @@ import HomeAdmin from '../pages/admin/home';
 import BaseRoot from '../pages/base/BaseRoot';
 import Home from '../pages/base/home';
 import Tours from '../pages/base/tours';
-import Register from '../pages/register';
 import Login from '../pages/login';
+import Register from '../pages/register';
 
 export const ROUTES = [
   {
