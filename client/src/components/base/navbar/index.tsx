@@ -1,24 +1,30 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../images/navbar/logo-default-225x39.png';
+import logo from '../../../images/footer/Travel-agency-logo-design-template-on-transparent-background-PNG.png';
 import IRegion from '../../../interfaces/region';
 import { ReactComponent as DownSvg } from '../../../svgs/angle-down-solid.svg';
 import { ReactComponent as RightSvg } from '../../../svgs/angle-right-solid.svg';
 import { ReactComponent as HeartSvg } from '../../../svgs/heart-regular.svg';
 import style from './style.module.scss';
 
+// const func = (): IRegion[] | null => JSON.parse(String(localStorage.getItem('wishlist')));
+// const localRegions = React.useMemo(() => func(), []);
+
 function Navbar(): JSX.Element {
+  const localRegions: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
   const menu = useRef<HTMLDivElement>(null);
   const drop = useRef<HTMLUListElement>(null);
   const content = useRef<HTMLDivElement>(null);
-  const [regions, setRegion] = useState<IRegion[]>([]);
+  const [regions, setRegions] = useState<IRegion[]>(localRegions !== null ? localRegions : []);
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const regions: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
-    setRegion(regions !== null ? regions : []);
-    setCount(regions !== null ? regions.length : 0);
-  }, [regions]);
+    JSON.stringify(regions) != JSON.stringify(localRegions) &&
+      setRegions((prev) => (localRegions !== null ? localRegions : prev));
+
+    setCount(regions.length);
+  }, [localRegions]);
+
   const burgerMenu = (element: HTMLButtonElement): void => {
     element.classList.toggle(style.burger__active);
     menu.current?.classList.toggle(style.menu__active);
@@ -41,7 +47,7 @@ function Navbar(): JSX.Element {
           <div className={style.navbar__content__container__logo}>
             <div className={style.navbar__content__container__logo__main}>
               <Link to={'home'}>
-                <img src={logo} alt="Logo" />
+                <img src={logo} alt="Logo" className={style.navbar__content__container__logo__main__icon} />
               </Link>
             </div>
           </div>

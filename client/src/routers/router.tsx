@@ -4,6 +4,7 @@ import BaseRoot from '../pages/base/BaseRoot';
 import Home from '../pages/base/home';
 import Tours from '../pages/base/tours';
 import Register from '../pages/register';
+import Login from '../pages/login';
 
 export const ROUTES = [
   {
@@ -39,4 +40,5 @@ export const ROUTES = [
     ],
   },
   { path: '/register', element: <Register /> },
+  { path: '/login', element: <Login /> },
 ];
