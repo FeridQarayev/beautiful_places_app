@@ -447,6 +447,11 @@
   .navbar__content__container__logo {
     height: 39px;
   }
+  .navbar__content__container__elements__icons__wishlist {
+    &:hover {
+      padding: 7px;
+    }
+  }
 }
 .burger__active {
   span {
