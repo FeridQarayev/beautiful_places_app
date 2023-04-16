@@ -38,7 +38,7 @@ function Register(): JSX.Element {
             </a>
           </figure>
           <Formik
-            initialValues={{ email: '', password: '', name: '', lastName: '', confirmePassword: '' }}
+            initialValues={{ email: '', password: '', name: '', lastName: '', confirmPassword: '' }}
             validationSchema={RegisterSchema}
             onSubmit={(values): void => {
               console.log(values);
