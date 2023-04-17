@@ -1,0 +1,41 @@
+.section{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.32;
+    margin: 0;
+    padding: 20px 0;
+    position: relative;
+    display: block;
+    
+}
+.section__bg{
+    background-position-y: 50%;
+    background-image: url(../../../images/about_us/about_bg.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    min-height: 722px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 5;
+    margin: 0 auto;
+    max-width: 1260px;
+    padding: 0 30px;
+}
