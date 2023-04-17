@@ -57,13 +57,58 @@
       line-height: 1.3;
       white-space: nowrap;
     }
-   
   }
   p {
     margin: 46px 0 0;
     max-width: 700px;
   }
-  p{
-    font-family: "Gilroy Light","Arial","Helvetica Neue","Helvetica",sans-serif;
+  p {
+    font-family: 'Gilroy Light', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
   }
+}
+.section__content {
+  margin: 97px 0;
+  display: block;
+  &__container {
+    margin: 0 auto;
+    max-width: 1260px;
+    padding: 0 30px;
+    &__context {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: flex-start;
+      margin: 0 -15px 33px;
+      &__holder {
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+  }
+  p{
+    margin: 0 0 0.8333em;
+    font-family: "Gilroy Light","Arial","Helvetica Neue","Helvetica",sans-serif;
+    color: #3c1053;
+  }
+}
+.section__heading {
+  text-align: left;
+  padding: 0 0 33px;
+  h2 {
+    font-size: 52px;
+    white-space: nowrap;
+    color: #ff595a;
+    font-family: "Gilroy","Arial","Helvetica Neue","Helvetica",sans-serif;
+    font-weight: 800;
+    line-height: 1.2;
+    span {
+      color: #3c1053;
+      font-family: 'Publico', 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
+ 
 }
