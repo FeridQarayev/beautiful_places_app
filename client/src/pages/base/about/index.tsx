@@ -1,4 +1,5 @@
 import React from 'react';
+import AboutSlider from   '../../../components/base/about-slider'
 import style from './style.module.scss';
 
 function Register(): JSX.Element {
@@ -50,8 +51,11 @@ function Register(): JSX.Element {
               <p>Aşağıdakı linklər vasitəsilə Azərbaycanın dayanıqlı səyahəti təşviq etmə prinsipləri və necə iştirak edə biləcəyiniz haqqında tanış ola bilərsiniz.</p>
             </div>
           </div>
+          
         </div>
+        <AboutSlider />
       </section>
+     
     </>
   );
 }
