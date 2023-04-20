@@ -1,0 +1,31 @@
+.wishlist {
+  &__up {
+    height: 500px;
+    background-color: bisque;
+  }
+  &__body {
+    margin: 50px 0px;
+    &__container {
+      max-width: 1200px;
+      margin: 0px auto;
+      &__title {
+        &__search {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          input {
+            padding: 15px 30px;
+            width: 70%;
+            height: 40px;
+            border-radius: 10px;
+            &:focus-visible{
+                outline: none;
+            }
+          }
+        }
+      }
+      &__content {
+      }
+    }
+  }
+}

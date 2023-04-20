@@ -88,10 +88,12 @@ function Navbar(): JSX.Element {
             </ul>
 
             <div className={style.navbar__content__container__elements__icons}>
-              <div className={style.navbar__content__container__elements__icons__wishlist}>
-                <span>{count}</span>
-                <HeartSvg />
-              </div>
+              <Link to={'/wishlist'}>
+                <div className={style.navbar__content__container__elements__icons__wishlist}>
+                  <span>{count}</span>
+                  <HeartSvg />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
