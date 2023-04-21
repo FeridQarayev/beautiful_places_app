@@ -120,13 +120,11 @@
     padding: 0;
     padding-bottom: 0;
   }
-
   .section__bg {
     height: 100%;
     padding: 15px 20px;
     width: 100%;
   }
-
   .container {
     padding-left: 0;
     padding-bottom: 0;
@@ -143,50 +141,48 @@
     background: #5f259f;
   }
 }
-
 @media screen and (min-width: 701px) {
   .container {
     height: 700px;
   }
 }
-
 @media screen and (max-width: 768px) {
   .section {
     min-height: 35vh;
   }
-  .container__content h1 {
-    opacity: 1;
-    font-size: 30px !important;
-  }
-
-  .container__content h1 span {
-    white-space: normal;
-  }
-
-  .container__content p {
-    display: none;
-    margin: 27px 0 0;
+  .container__content {
+    h1 {
+      opacity: 1;
+      font-size: 30px !important;
+      span {
+        white-space: normal;
+      }
+    }
+    p {
+      display: none;
+      margin: 27px 0 0;
+    }
   }
   .section__content__container__context {
     margin: 0 -18px 33px;
   }
-  .section__heading h2 {
-    font-size: 33px;
+  .section__heading {
+    h2 {
+      font-size: 33px;
+    }
   }
 }
-
 @media screen and (min-width: 769px) {
-  .section__heading h2 {
-    margin: 0 5px 0 0;
-  }
-  .section__heading h2 span {
-    display: inline;
-    margin: 0 10px;
+  .section__heading {
+    h2 {
+      margin: 0 5px 0 0;
+      span {
+        display: inline;
+        margin: 0 10px;
+      }
+    }
   }
 }
-
-
-
 @media screen and (max-width: 1023px) {
   .section__bg {
     display: block;
@@ -196,14 +192,17 @@
   }
   .section__content {
     margin: 45px 0 57px;
+    &__container {
+      padding: 0 18px;
+    }
   }
-  .section__content__container {
-    padding: 0 18px;
-  }
+
   .section__heading {
     padding: 0 0 27px;
-  }
-  .section__heading h2 span {
-    margin: -3px 0 0;
+    h2 {
+      span {
+        margin: -3px 0 0;
+      }
+    }
   }
 }

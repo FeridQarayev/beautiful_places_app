@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutSlider from   '../../../components/base/about-slider'
+import AboutSlider from '../../../components/base/about-slider';
 import style from './style.module.scss';
 
 function Register(): JSX.Element {
@@ -48,14 +48,15 @@ function Register(): JSX.Element {
                 edir. Yerli və xarici bütün qonaqlar bu təcrübəni mütləq sınaqdan keçirməlidir - əminik ki, əsrarəngiz
                 bölgələrimizin müxtəlifliyi və zənginliyi sizi heyran edəcək!
               </p>
-              <p>Aşağıdakı linklər vasitəsilə Azərbaycanın dayanıqlı səyahəti təşviq etmə prinsipləri və necə iştirak edə biləcəyiniz haqqında tanış ola bilərsiniz.</p>
+              <p>
+                Aşağıdakı linklər vasitəsilə Azərbaycanın dayanıqlı səyahəti təşviq etmə prinsipləri və necə iştirak edə
+                biləcəyiniz haqqında tanış ola bilərsiniz.
+              </p>
             </div>
           </div>
-          
         </div>
         <AboutSlider />
       </section>
-     
     </>
   );
 }
