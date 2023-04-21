@@ -87,9 +87,9 @@
       }
     }
   }
-  p{
+  p {
     margin: 0 0 0.8333em;
-    font-family: "Gilroy Light","Arial","Helvetica Neue","Helvetica",sans-serif;
+    font-family: 'Gilroy Light', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
     color: #3c1053;
   }
 }
@@ -100,7 +100,7 @@
     font-size: 52px;
     white-space: nowrap;
     color: #ff595a;
-    font-family: "Gilroy","Arial","Helvetica Neue","Helvetica",sans-serif;
+    font-family: 'Gilroy', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
     font-weight: 800;
     line-height: 1.2;
     span {
@@ -110,5 +110,100 @@
       font-weight: 300;
     }
   }
- 
+}
+
+@media screen and (max-width: 699px) {
+  .section {
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 0;
+  }
+
+  .section__bg {
+    height: 100%;
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  .container {
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    margin-top: auto;
+    width: 100%;
+    display: block;
+    min-height: 0;
+    padding-top: 78px;
+  }
+  .container__content {
+    padding: 15px 20px;
+    width: 100%;
+    background: #5f259f;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .container {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    min-height: 35vh;
+  }
+  .container__content h1 {
+    opacity: 1;
+    font-size: 30px !important;
+  }
+
+  .container__content h1 span {
+    white-space: normal;
+  }
+
+  .container__content p {
+    display: none;
+    margin: 27px 0 0;
+  }
+  .section__content__container__context {
+    margin: 0 -18px 33px;
+  }
+  .section__heading h2 {
+    font-size: 33px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .section__heading h2 {
+    margin: 0 5px 0 0;
+  }
+  .section__heading h2 span {
+    display: inline;
+    margin: 0 10px;
+  }
+}
+
+
+
+@media screen and (max-width: 1023px) {
+  .section__bg {
+    display: block;
+  }
+  .container__content {
+    width: auto;
+  }
+  .section__content {
+    margin: 45px 0 57px;
+  }
+  .section__content__container {
+    padding: 0 18px;
+  }
+  .section__heading {
+    padding: 0 0 27px;
+  }
+  .section__heading h2 span {
+    margin: -3px 0 0;
+  }
 }
