@@ -19,7 +19,8 @@ function Navbar(): JSX.Element {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    JSON.stringify(regions) != JSON.stringify(localRegions) &&
+    const localRegions: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
+    // JSON.stringify(regions) != JSON.stringify(localRegions) &&
       setRegions((prev) => (localRegions !== null ? localRegions : prev));
 
     setCount(regions.length);
@@ -77,7 +78,7 @@ function Navbar(): JSX.Element {
                 </ul>
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
-                <Link to={'#'}>Services</Link>
+                <Link to={'#'}>Turlar</Link>
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
                 <Link to={'#'}>Haqqımızda</Link>
