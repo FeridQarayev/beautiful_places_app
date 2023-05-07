@@ -9,7 +9,7 @@ import './style.scss';
 
 function AboutSlider(): JSX.Element {
   return (
-    <div className="container">
+    <div className="about_container">
       <input type="radio" name="slider" className="d-none" id="s1" checked />
       <input type="radio" name="slider" className="d-none" id="s2" />
       <input type="radio" name="slider" className="d-none" id="s3" />
