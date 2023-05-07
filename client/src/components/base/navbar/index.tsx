@@ -14,6 +14,7 @@ function Navbar(): JSX.Element {
   const drop = useRef<HTMLUListElement>(null);
   const content = useRef<HTMLDivElement>(null);
 
+
   const burgerMenu = (element: HTMLButtonElement): void => {
     element.classList.toggle(style.burger__active);
     menu.current?.classList.toggle(style.menu__active);
@@ -66,7 +67,7 @@ function Navbar(): JSX.Element {
                 </ul>
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
-                <Link to={'#'}>Services</Link>
+                <Link to={'#'}>Turlar</Link>
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
                 <Link to={'#'}>Haqqımızda</Link>
