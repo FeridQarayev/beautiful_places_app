@@ -1,24 +1,17 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import IRegion from '../../../interfaces/region';
+import { addWishlist } from '../../../redux/wishlistSlice/wishlistSlice';
 import { ReactComponent as HeartSVG } from '../../../svgs/heart-regular.svg';
 import style from './style.module.css';
 import 'swiper/css';
 
 function RegionSliderItem(data: { region: IRegion; isLiked: boolean }): JSX.Element {
-  const addWishlist = (e: React.MouseEvent<HTMLDivElement> | undefined): void => {
-    const regions: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
+  const dispatch = useDispatch();
+  const addWishlists = (e: React.MouseEvent<HTMLDivElement> | undefined): void => {
     e?.currentTarget.classList.toggle(style.added);
-    const prevRegion = regions?.find((x) => x.id === data.region.id);
-    if (prevRegion !== undefined) {
-      const prevNumber = regions?.indexOf(prevRegion);
-      prevNumber !== undefined && regions?.splice(prevNumber, 1);
-      localStorage.setItem('wishlist', JSON.stringify(regions));
-    } else {
-      regions !== null
-        ? localStorage.setItem('wishlist', JSON.stringify([...regions, data.region]))
-        : localStorage.setItem('wishlist', JSON.stringify([data.region]));
-    }
+    dispatch(addWishlist(data.region));
   };
   return (
     <Link to={'#'}>
@@ -32,7 +25,7 @@ function RegionSliderItem(data: { region: IRegion; isLiked: boolean }): JSX.Elem
           <div className={style.region_up}>
             <div
               className={data.isLiked ? [style.region_heart_logo, style.added].join(' ') : style.region_heart_logo}
-              onClick={addWishlist}
+              onClick={addWishlists}
             >
               <HeartSVG />
             </div>

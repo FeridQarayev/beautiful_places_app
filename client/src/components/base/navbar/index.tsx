@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/footer/Travel-agency-logo-design-template-on-transparent-background-PNG.png';
 import IRegion from '../../../interfaces/region';
@@ -7,23 +8,11 @@ import { ReactComponent as RightSvg } from '../../../svgs/angle-right-solid.svg'
 import { ReactComponent as HeartSvg } from '../../../svgs/heart-regular.svg';
 import style from './style.module.scss';
 
-// const func = (): IRegion[] | null => JSON.parse(String(localStorage.getItem('wishlist')));
-// const localRegions = React.useMemo(() => func(), []);
-
 function Navbar(): JSX.Element {
-  const localRegions: IRegion[] | null = JSON.parse(String(localStorage.getItem('wishlist')));
+  const count = useSelector((state: { wishlists: { items: IRegion[] } }) => state.wishlists.items).length;
   const menu = useRef<HTMLDivElement>(null);
   const drop = useRef<HTMLUListElement>(null);
   const content = useRef<HTMLDivElement>(null);
-  const [regions, setRegions] = useState<IRegion[]>(localRegions !== null ? localRegions : []);
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    JSON.stringify(regions) != JSON.stringify(localRegions) &&
-      setRegions((prev) => (localRegions !== null ? localRegions : prev));
-
-    setCount(regions.length);
-  }, [localRegions]);
 
   const burgerMenu = (element: HTMLButtonElement): void => {
     element.classList.toggle(style.burger__active);
