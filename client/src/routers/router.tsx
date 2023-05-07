@@ -1,5 +1,6 @@
 import AdminRoot from '../pages/admin/AdminRoot';
 import HomeAdmin from '../pages/admin/home';
+import About from '../pages/base/about';
 import BaseRoot from '../pages/base/BaseRoot';
 import Home from '../pages/base/home';
 import Tours from '../pages/base/tours';
@@ -22,6 +23,10 @@ export const ROUTES = [
       {
         path: 'tours',
         element: <Tours />,
+      },
+      {
+        path: 'about',
+        element: <About />,
       },
     ],
   },
