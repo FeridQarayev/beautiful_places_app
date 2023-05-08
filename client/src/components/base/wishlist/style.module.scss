@@ -1,0 +1,76 @@
+.wishlist {
+  &__header {
+    height: 600px;
+    padding: 10px 20px;
+    width: 100%;
+    background: url('https://wallup.net/wp-content/uploads/2015/12/278558-architecture-modern-Azerbaijan-town_square-lights-building-tiles-clear_sky-evening-landscape.jpg')
+      no-repeat center;
+  }
+  &__body {
+    margin: 150px 0 100px;
+    &__container {
+      max-width: 1280px;
+      margin: 0 auto;
+      &__title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        h2 {
+          font-size: 45px;
+        }
+        &__actions {
+          display: flex;
+          gap: 50px;
+          width: 70%;
+          position: relative;
+          input {
+            border-radius: 0 10px 0 10px;
+            padding: 10px 20px;
+            width: 100%;
+            border-color: rgba(0, 0, 255, 0.444);
+            outline: none;
+          }
+          button {
+            position: absolute;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            border: 1px solid gray;
+            background-color: gray;
+            color: azure;
+            margin-left: 10px;
+            cursor: pointer;
+            left: 100%;
+          }
+        }
+        &__text {
+          text-align: center;
+          font-size: 20px;
+        }
+      }
+      &__main {
+        margin-top: 100px;
+        &__list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 25px;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .wishlist__body__container {
+    max-width: 768px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wishlist__body__container {
+    max-width: 540px;
+  }
+  .wishlist__body__container__main__list {
+    justify-content: center;
+  }
+}

@@ -1,3 +1,4 @@
+import Wishlist from '../components/base/wishlist';
 import AdminRoot from '../pages/admin/AdminRoot';
 import HomeAdmin from '../pages/admin/home';
 import About from '../pages/base/about';
@@ -27,6 +28,10 @@ export const ROUTES = [
       {
         path: 'about',
         element: <About />,
+      },
+      {
+        path: 'wishlist',
+        element: <Wishlist />,
       },
     ],
   },

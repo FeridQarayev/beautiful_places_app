@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../images/footer/Travel-agency-logo-design-template-on-transparent-background-PNG.png';
 import IRegion from '../../../interfaces/region';
 import { ReactComponent as DownSvg } from '../../../svgs/angle-down-solid.svg';
@@ -9,11 +9,11 @@ import { ReactComponent as HeartSvg } from '../../../svgs/heart-regular.svg';
 import style from './style.module.scss';
 
 function Navbar(): JSX.Element {
+  const navigate = useNavigate();
   const count = useSelector((state: { wishlists: { items: IRegion[] } }) => state.wishlists.items).length;
   const menu = useRef<HTMLDivElement>(null);
   const drop = useRef<HTMLUListElement>(null);
   const content = useRef<HTMLDivElement>(null);
-
 
   const burgerMenu = (element: HTMLButtonElement): void => {
     element.classList.toggle(style.burger__active);
@@ -30,6 +30,8 @@ function Navbar(): JSX.Element {
       : content.current?.classList.remove(style.navbar__fixed);
   };
 
+  const goWishlist = (): void => navigate('./wishlist');
+
   return (
     <nav className={style.navbar}>
       <div ref={content} className={style.navbar__content}>
@@ -44,7 +46,7 @@ function Navbar(): JSX.Element {
           <div className={style.navbar__content__container__elements}>
             <ul className={style.navbar__content__container__elements__list}>
               <li className={style.navbar__content__container__elements__list__item}>
-                <Link to={'#'}>Ana Səhifə</Link>
+                <Link to={'home'}>Ana Səhifə</Link>
               </li>
               <li className={style.navbar__content__container__elements__list__item}>
                 <Link to={'#'}>Məkanlar</Link>
@@ -78,7 +80,7 @@ function Navbar(): JSX.Element {
             </ul>
 
             <div className={style.navbar__content__container__elements__icons}>
-              <div className={style.navbar__content__container__elements__icons__wishlist}>
+              <div className={style.navbar__content__container__elements__icons__wishlist} onClick={goWishlist}>
                 <span>{count}</span>
                 <HeartSvg />
               </div>
@@ -97,7 +99,7 @@ function Navbar(): JSX.Element {
             </Link>
           </div>
           <div className={style.navbar__mobile__panel__icon}>
-            <div className={style.navbar__mobile__panel__icon__wishlist}>
+            <div className={style.navbar__mobile__panel__icon__wishlist} onClick={goWishlist}>
               <span>{count}</span>
               <HeartSvg />
             </div>
@@ -107,7 +109,7 @@ function Navbar(): JSX.Element {
           <div ref={menu} className={style.navbar__mobile__elements__content}>
             <nav className={style.navbar__mobile__elements__content__list}>
               <li className={style.navbar__mobile__elements__content__list__item}>
-                <Link className={style.dropdown__active__link} to={'#'}>
+                <Link className={style.dropdown__active__link} to={'home'}>
                   Ana Səhifə
                 </Link>
               </li>
