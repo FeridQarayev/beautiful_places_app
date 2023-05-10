@@ -1,0 +1,74 @@
+#variables:
+#  jwt.secret-key: "zed"
+#  jwt.expire-time: 120
+
+
+jwt:
+  secret-key: ourplaces
+  expire-time: 3600
+  issuer: BEAUTIFUL_PLACES
+  refresh_token:
+    expiration: 900
+
+
+app:
+  host: "http://localhost:${server.port}"
+
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/beautifulplaces
+    username: admin
+    password: admin123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: zmansurov3@gmail.com
+
+    password: xaybmraxpbmrpdon
+    port: 587
+    properties:
+      mail:
+        smtp:
+
+          auth: true
+          starttls:
+            enable: true
+            required: true
+            timeout: 5000
+    protocol: smtp
+    test-connection: false
+
+#  mail:
+#    host: smtp.gmail.com
+#    username: azebeautifulplacesforyou@gmail.com
+#    password: passwordforbeautifulplaces
+#    port: 587
+#    protocol: smtp
+#    properties:
+#      "mail.transport.protocol": smtp
+#      "mail.smtp.auth": true
+#      "mail.smtp.starttls.enable": true
+
+
+#logging:
+#        level:
+#          org:
+#            springframework:
+#              security=DEBUG:
+#
+server:
+  port: 1920
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+jwt:
+  security:
+    white:
+      list:
+        - /api/v1/auth/
+        - /places/heyo
