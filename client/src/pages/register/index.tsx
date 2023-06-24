@@ -1,7 +1,10 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React from 'react';
+import { Toaster, toast } from 'react-hot-toast';
 import * as Yup from 'yup';
 import register from '../../images/register/Travel-agency-logo-design-template-on-transparent-background-PNG (1).png';
+import type IUser from '../../interfaces/user';
+import { userCreate } from '../../services/user';
 import { ReactComponent as EmailSvg } from '../../svgs/email.svg';
 import { ReactComponent as LockSvg } from '../../svgs/lock.svg';
 import { ReactComponent as UserSvg } from '../../svgs/user-regular.svg';
@@ -41,7 +44,22 @@ function Register(): JSX.Element {
             initialValues={{ email: '', password: '', name: '', lastName: '', confirmPassword: '' }}
             validationSchema={RegisterSchema}
             onSubmit={(values): void => {
-              console.log(values);
+              const user: IUser = {
+                id: 0,
+                name: values.name,
+                surname: values.lastName,
+                email: values.email,
+                password: values.password,
+              };
+              void userCreate(user)
+                .then((res) => {
+                  if (!res.data.error) {
+                    toast.success('Succesfull created!');
+                  } else {
+                    toast.error('Error!');
+                  }
+                })
+                .catch(() => toast.error('Error!'));
             }}
           >
             {(): JSX.Element => (
@@ -100,6 +118,7 @@ function Register(): JSX.Element {
           <div className={style.copy}>© Panagea</div>
         </aside>
       </div>
+      <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 }
