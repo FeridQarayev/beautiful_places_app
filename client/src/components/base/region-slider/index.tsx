@@ -82,6 +82,14 @@ const REGIONS: IRegion[] = [
     image: '9d462cd3-41c8-4ae0-b922-2450d86322c3.jpg',
   },
   {
+    id: 19,
+    name: 'Salyan',
+    ticket: 'Cənub-şərq marşrutu',
+    description: `Salyandan Ərdəbilə, Təbrizə, Dərbəndə və başqa şəhərlərə balıq, kürü, Babazənən dağı yaxınlığından 
+    çıxarılan neft və duz ixrac olunurdu. Rayonda 16 yaşayış məntəqəsi var.`,
+    image: '375px-Salyan_rayonu_2011_(16).jpg',
+  },
+  {
     id: 9,
     name: 'Qəbələ',
     ticket: 'Şimal-qərb marşrutu',
